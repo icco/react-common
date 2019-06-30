@@ -1,6 +1,6 @@
 {
   "name": "@icco/react-common",
-  "version": "2019.6.30.1",
+  "version": "2019.6.30-1",
   "private": false,
   "dependencies": {
     "next": "^8.1",

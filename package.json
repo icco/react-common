@@ -1,0 +1,10 @@
+{
+  "name": "@icco/react-common",
+  "version": "2019.06.30",
+  "description": "A set of common components for react on my websites",
+  "main": "index.js",
+  "repository": "git@github.com:icco/react-common.git",
+  "author": "Nat Welch <nat@natwelch.com>",
+  "license": "MIT",
+  "private": false
+}

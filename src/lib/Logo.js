@@ -1,9 +1,4 @@
-import dynamic from "next/dynamic";
-
-const P5Wrapper = dynamic(import("react-p5-wrapper"), {
-  loading: () => "",
-  ssr: false,
-});
+const P5Wrapper = require("react-p5-wrapper");
 
 // spinning logo
 function sketch(size) {
@@ -13,6 +8,7 @@ function sketch(size) {
 
     p.setup = function() {
       p.createCanvas(size, size);
+      p.background(256, 0);
 
       p.noStroke();
       p.fill(51);
@@ -25,10 +21,6 @@ function sketch(size) {
     };
 
     p.draw = function() {
-      if (!(round(t) % 12)) {
-        p.background(256, 60);
-      }
-
       var k = p.width / 4;
 
       [[k * 1, k * 1], [k * 3, k * 1], [k * 1, k * 3], [k * 3, k * 3]].forEach(

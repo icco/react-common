@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { withRouter } from "next/router";
 import React from "react";
 
 import Logo from "./Logo";
@@ -9,35 +7,26 @@ class Header extends React.Component {
     let prefix = <></>;
     let head = <></>;
     let nav = (
-      <Link key="/auth/sign-in" href="/auth/sign-in">
-        <a className="f6 link dib dim mr3 black mr4-ns" href="/auth/sign-in">
-          Sign In
-        </a>
-      </Link>
+      <a className="f6 link dib dim mr3 black mr4-ns" href="/auth/sign-in">
+        Sign In
+      </a>
     );
 
     if (this.props.loggedInUser) {
       nav = (
         <>
-          <Link key="/auth/sign-out" href="/auth/sign-out">
-            <a
-              className="f6 link dib dim mr3 black mr4-ns"
-              href="/auth/sign-out"
-            >
-              Sign Out
-            </a>
-          </Link>
+          <a className="f6 link dib dim mr3 black mr4-ns" href="/auth/sign-out">
+            Sign Out
+          </a>
         </>
       );
     }
 
     if (this.props.noLogo) {
       prefix = (
-        <Link href="/">
-          <a className="link dark-gray dim">
-            <Logo size={50} className="v-mid mh0-ns dib-ns center ph0 logo" />
-          </a>
-        </Link>
+        <a href="/" className="link dim">
+          <Logo size={50} className="v-mid mh0-ns dib-ns center ph0 logo" />
+        </a>
       );
     }
 
@@ -53,4 +42,4 @@ class Header extends React.Component {
   }
 }
 
-export default withRouter(Header);
+export default Header;

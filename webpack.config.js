@@ -1,6 +1,6 @@
 var path = require("path");
 module.exports = {
-  mode: 'production',
+  mode: "production",
   entry: "./src/lib/index.js",
   output: {
     path: path.resolve(__dirname, "build"),

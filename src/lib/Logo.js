@@ -1,4 +1,4 @@
-import {ReactComponent as LogoIcon} from './dots.svg';
+import { ReactComponent as LogoIcon } from "./dots.svg";
 
 const Logo = params => {
   let size = 200;

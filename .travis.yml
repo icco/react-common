@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- stable
+deploy:
+  provider: npm
+  email: nat@natwelch.com
+  api_key:
+    secure: o3KGejKh/Bzb+64QqQxhSJA7VXISaXeJVI/G7d1qCBNVnWveWVEmZXkV27G/EhwhTPDkNJXaOra2/rE0h1qqJBEBqgTxQ0KMYepwrk67V/m45exy1gGJ47/CQK/YZKYNglsn061ozuPxw63gZc1q6+GNYSaVuGTnxx13f4p1+sTPFkKgMtDCWEE/Zs3z6qEc3YRkLJCHr57eL9NViwckCrShc1t4YV7qoF2ZmZrCETmcsAbWrVUYX+fFhPxHnpX8QCbA9zt4LaxtdzhAVq62Me9D2sDTA/bjhfiGht8ESivbomx0OVRMdFHDyBOAGvDqUOqJFrn3t+6X9mzKiC3aHa3FxPyYR4pUfBU+x8hs4tQLuebloxbwIBmMumgLi30GVRsxMoGxfzJPtynj2bxxKiHEcp1qOnJ2w9/H/vWmU/MHWln2W3g+pMUQYT0NhdbepSD5fuAP3vO+J+dFWqAXEp4MM14ajdbJjTCR2s7+TloZL/cg1VNSThEY+ea5Vv8CINyFEZvUp2z5jdnLrm4XF7T3cHqxeCAalVk9J9hlWTPi04B6ga0gn7Qbe36/oVLzdONulC2nwpq7aF9ZjYbKUSUM7CUoqn/QnRvi+EixKl6ezxsCaRKbIbw40b6+GFvyFbWTKnOjmRadILFq0Mt0SUnhuT8EL2m1vrKLXW360ss=
+  on:
+    tags: true
+    repo: icco/react-common

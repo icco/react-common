@@ -25,6 +25,7 @@
     "@babel/preset-env": "^7.4.5",
     "babel-loader": "^8.0.6",
     "prettier": "^1.17.0",
+    "react-svg-loader": "^3.0.3",
     "webpack-cli": "^3.3.5"
   },
   "browserslist": {

@@ -1,6 +1,6 @@
 {
   "name": "@icco/react-common",
-  "version": "2019.06.30-5",
+  "version": "2019.06.30-6",
   "private": false,
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",

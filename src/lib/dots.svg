@@ -1,0 +1,17 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg" style="">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <path fill="#fff" id="canvas_background" height="402" width="402" d="M-1 -1 L401 -1 L401 401 L-1 401 Z" class="LvaqBhFD_0"></path>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <path fill="url(#gridpattern)" stroke-width="0" height="100%" width="100%" d="M0 0 L100 0 L100 100 L0 100 Z" class="LvaqBhFD_1"></path>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" stroke-width="20" stroke="#000" fill="#fff" d="M25,100A75,75 0,1,1 175,100A75,75 0,1,1 25,100" class="LvaqBhFD_2"></path>
+  <path id="svg_5" stroke-width="20" stroke="#000" fill="#fff" d="M225,300A75,75 0,1,1 375,300A75,75 0,1,1 225,300" class="LvaqBhFD_3"></path>
+  <path id="svg_6" stroke-width="20" stroke="#000" fill="#fff" d="M25,300A75,75 0,1,1 175,300A75,75 0,1,1 25,300" class="LvaqBhFD_4"></path>
+  <path id="svg_7" stroke-width="20" stroke="#000" fill="#fff" d="M225,100A75,75 0,1,1 375,100A75,75 0,1,1 225,100" class="LvaqBhFD_5"></path>
+ </g>
+<style data-made-with="vivus-instant">.LvaqBhFD_0{stroke-dasharray:1608 1610;stroke-dashoffset:1609;animation:LvaqBhFD_draw_0 16200ms linear 0ms infinite,LvaqBhFD_fade 16200ms linear 0ms infinite;}.LvaqBhFD_1{stroke-dasharray:400 402;stroke-dashoffset:401;animation:LvaqBhFD_draw_1 16200ms linear 0ms infinite,LvaqBhFD_fade 16200ms linear 0ms infinite;}.LvaqBhFD_2{stroke-dasharray:472 474;stroke-dashoffset:473;animation:LvaqBhFD_draw_2 16200ms linear 0ms infinite,LvaqBhFD_fade 16200ms linear 0ms infinite;}.LvaqBhFD_3{stroke-dasharray:472 474;stroke-dashoffset:473;animation:LvaqBhFD_draw_3 16200ms linear 0ms infinite,LvaqBhFD_fade 16200ms linear 0ms infinite;}.LvaqBhFD_4{stroke-dasharray:472 474;stroke-dashoffset:473;animation:LvaqBhFD_draw_4 16200ms linear 0ms infinite,LvaqBhFD_fade 16200ms linear 0ms infinite;}.LvaqBhFD_5{stroke-dasharray:472 474;stroke-dashoffset:473;animation:LvaqBhFD_draw_5 16200ms linear 0ms infinite,LvaqBhFD_fade 16200ms linear 0ms infinite;}@keyframes LvaqBhFD_draw{100%{stroke-dashoffset:0;}}@keyframes LvaqBhFD_fade{0%{stroke-opacity:1;}99.38271604938272%{stroke-opacity:1;}100%{stroke-opacity:0;}}@keyframes LvaqBhFD_draw_0{0.6172839506172839%{stroke-dashoffset: 1609}15.88960393846777%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}@keyframes LvaqBhFD_draw_1{15.88960393846777%{stroke-dashoffset: 401}19.695819174718885%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}@keyframes LvaqBhFD_draw_2{19.695819174718885%{stroke-dashoffset: 473}24.185444627952744%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}@keyframes LvaqBhFD_draw_3{24.18544462795274%{stroke-dashoffset: 473}28.675070081186604%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}@keyframes LvaqBhFD_draw_4{28.675070081186604%{stroke-dashoffset: 473}33.16469553442046%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}@keyframes LvaqBhFD_draw_5{33.16469553442046%{stroke-dashoffset: 473}37.65432098765432%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}</style></svg>

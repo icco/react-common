@@ -1,50 +1,6 @@
-// spinning logo
-function sketch(size) {
-  return p => {
-    let t = 0;
-    let rand = [];
+import {ReactComponent as LogoIcon} from './dots.svg';
 
-    p.setup = function() {
-      p.createCanvas(size, size);
-      p.background(256, 0);
-
-      p.noStroke();
-      p.fill(51);
-      rand = [
-        p.random(-180, 180),
-        p.random(-180, 180),
-        p.random(-180, 180),
-        p.random(-180, 180),
-      ];
-    };
-
-    p.draw = function() {
-      var k = p.width / 4;
-
-      [[k * 1, k * 1], [k * 3, k * 1], [k * 1, k * 3], [k * 3, k * 3]].forEach(
-        function(arr, i) {
-          let x = arr[0];
-          let y = arr[1];
-          let r = rand[i];
-
-          // each particle moves in a circle
-          let myX = x + 0.15 * p.width * p.cos(2 * p.PI * t + r);
-          let myY = y + 0.15 * p.width * p.sin(2 * p.PI * t + r);
-
-          p.ellipse(myX, myY, 0.04 * p.width); // draw particle
-        }
-      );
-
-      t = t + 0.01; // update time
-    };
-  };
-}
-
-function round(x) {
-  return Number.parseFloat(x).toFixed(4);
-}
-
-const Link = params => {
+const Logo = params => {
   let size = 200;
   if (params.size) {
     size = params.size;
@@ -55,8 +11,9 @@ const Link = params => {
       className={params.className}
       style={{ width: `${size}px`, height: `${size}px` }}
     >
+      <LogoIcon />
     </div>
   );
 };
 
-export default Link;
+export default Logo;

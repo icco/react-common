@@ -1,5 +1,3 @@
-const P5Wrapper = require("react-p5-wrapper");
-
 // spinning logo
 function sketch(size) {
   return p => {
@@ -57,7 +55,6 @@ const Link = params => {
       className={params.className}
       style={{ width: `${size}px`, height: `${size}px` }}
     >
-      <P5Wrapper sketch={sketch(size)} />
     </div>
   );
 };

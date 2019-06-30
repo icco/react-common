@@ -8,7 +8,6 @@
     "react": "^16.8",
     "react-dom": "^16.8",
     "react-loading": "^2.0",
-    "react-p5-wrapper": "^0.0.4",
     "webpack": "^4.35.0"
   },
   "scripts": {

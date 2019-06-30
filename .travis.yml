@@ -9,3 +9,4 @@ deploy:
   on:
     tags: true
     repo: icco/react-common
+  skip_cleanup: true

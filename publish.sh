@@ -11,7 +11,7 @@ OLDINT=$(echo $OLDVERSION | sed 's/^.*-//')
 OLDDATE=$(echo $OLDVERSION | sed 's/-.*$//')
 
 INT=1
-if [[ ${DATE} -eq ${OLDDATE} ]]; then
+if [[ ${DATE} == ${OLDDATE} ]]; then
   INT=$(($OLDINT + 1))
 fi
 

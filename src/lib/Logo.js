@@ -9,13 +9,8 @@ class Logo extends React.Component {
       size = this.props.size;
     }
 
-    console.log(LogoIcon);
-
     return (
-      <div
-        className={this.props.className}
-        style={{ width: `${size}px`, height: `${size}px` }}
-      >
+      <div className={this.props.className} >
         <LogoIcon />
       </div>
     );

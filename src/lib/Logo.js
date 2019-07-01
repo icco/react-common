@@ -1,4 +1,4 @@
-import LogoIcon from "react-svg-loader!./dots.svg";
+import LogoIcon from "./dots.svg";
 
 const Logo = params => {
   let size = 200;

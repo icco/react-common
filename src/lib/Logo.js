@@ -11,7 +11,7 @@ const Logo = params => {
       className={params.className}
       style={{ width: `${size}px`, height: `${size}px` }}
     >
-      <LogoIcon />
+      <img src={LogoIcon} />
     </div>
   );
 };

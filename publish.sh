@@ -18,7 +18,7 @@ fi
 VERSION=${DATE}-${INT}
 echo $VERSION
 
-#jq ".version = \"$VERSION\"" package.json | sponge package.json
-#git commit package.json -m "$VERSION"
-#git tag -s $VERSION -m $VERSION
-#git push --tags
+jq ".version = \"$VERSION\"" package.json | sponge package.json
+git commit package.json -m "$VERSION"
+git tag -s $VERSION -m $VERSION
+git push --tags

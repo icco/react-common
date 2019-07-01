@@ -1,19 +1,25 @@
+import React from "react";
+
 import LogoIcon from "./dots.svg";
 
-const Logo = params => {
-  let size = 200;
-  if (params.size) {
-    size = params.size;
-  }
+class Logo extends React.Component {
+  render() {
+    let size = 200;
+    if (this.props.size) {
+      size = this.props.size;
+    }
 
-  return (
-    <div
-      className={params.className}
-      style={{ width: `${size}px`, height: `${size}px` }}
-    >
-      <img src={LogoIcon} />
-    </div>
-  );
-};
+    console.log(LogoIcon);
+
+    return (
+      <div
+        className={this.props.className}
+        style={{ width: `${size}px`, height: `${size}px` }}
+      >
+        <img src={LogoIcon} />
+      </div>
+    );
+  }
+}
 
 export default Logo;

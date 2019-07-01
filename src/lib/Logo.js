@@ -16,7 +16,7 @@ class Logo extends React.Component {
         className={this.props.className}
         style={{ width: `${size}px`, height: `${size}px` }}
       >
-        <img src={LogoIcon} />
+        <LogoIcon />
       </div>
     );
   }

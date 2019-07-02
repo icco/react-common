@@ -27,16 +27,20 @@ function buildSVG(size, el) {
 }
 
 class Logo extends React.Component {
+  componentDidMount() {
+    const { size } = this.props;
+    buildSVG(size, this.refs.svg);
+  }
+
   render() {
-    let size = 200;
-    if (this.props.size) {
-      size = this.props.size;
-    }
+    const { size } = this.props;
 
     return (
-      <div className={this.props.className}>
-        <div ref={ref => buildSVG(size, ref)} />
-      </div>
+      <div
+        style={{ width: `${size}px`, height: `${size}px` }}
+        className={this.props.className}
+        ref="svg"
+      />
     );
   }
 }

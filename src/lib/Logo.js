@@ -1,6 +1,7 @@
 import React from "react";
 import SVG from "svg.js";
 
+// This modifies the DOM, as such, can only be called from componentDidMount.
 function buildSVG(size, el) {
   let canvas = SVG(el).size(size, size);
   let k = size / 4;
@@ -21,9 +22,6 @@ function buildSVG(size, el) {
       });
     }
   );
-
-  //new Vivus('drawing', { duration: 200 }, myCallback);
-  return el;
 }
 
 class Logo extends React.Component {

@@ -3,7 +3,6 @@
 set -ex
 
 git diff --exit-code --shortstat
-git push --all
 
 DATE=$(date +%Y.%m.%d | sed 's/\.0/./g')
 OLDVERSION=$(jq -r ".version" package.json)

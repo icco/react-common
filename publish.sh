@@ -21,4 +21,5 @@ echo $VERSION
 jq ".version = \"$VERSION\"" package.json | sponge package.json
 git commit package.json -m "$VERSION"
 git tag -s $VERSION -m $VERSION
+git push --all
 git push --tags

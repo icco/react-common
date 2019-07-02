@@ -2,12 +2,12 @@ import React from "react";
 import SVG from "svg.js";
 
 function buildSVG(size, el) {
-  var canvas = SVG(el).size(size, size);
-  var k = size / 4;
+  let canvas = SVG(el).size(size, size);
+  let k = size / 4;
   [[k * 1, k * 1], [k * 3, k * 1], [k * 1, k * 3], [k * 3, k * 3]].forEach(
     function(arr, i) {
       // Set the radius
-      var c = canvas.circle(size / 4.0 + size / 10.0);
+      let c = canvas.circle(size / 4.0 + size / 10.0);
 
       // Put it where we want to
       c.cx(arr[0]);
@@ -33,7 +33,11 @@ class Logo extends React.Component {
       size = this.props.size;
     }
 
-    return buildSVG(size, <div className={this.props.className} />);
+    return (
+      <div className={this.props.className}>
+        <div ref={ref => buildSVG(size, ref)} />
+      </div>
+    );
   }
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "@icco/react-common",
-  "version": "2019.7.2-5",
+  "version": "2019.7.5-1",
   "private": false,
   "dependencies": {
     "@svgdotjs/svg.topath.js": "^2.0.3",

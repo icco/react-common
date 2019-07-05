@@ -3,11 +3,12 @@
   "version": "2019.7.2-5",
   "private": false,
   "dependencies": {
+    "@svgdotjs/svg.topath.js": "^2.0.3",
     "prop-types": "^15.7",
     "react": "^16.8",
     "react-dom": "^16.8",
     "react-loading": "^2.0",
-    "svg.js": "^2.7.1",
+    "@svgdotjs/svg.js": "^3.0.1",
     "webpack": "^4.35.0"
   },
   "scripts": {

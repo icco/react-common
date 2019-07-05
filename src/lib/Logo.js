@@ -1,5 +1,6 @@
 import React from "react";
-import SVG from "svg.js";
+import SVG from "@svgdotjs/svg.js";
+import "@svgdotjs/svg.topath.js";
 
 // This modifies the DOM, as such, can only be called from componentDidMount.
 function buildSVG(size, el) {
@@ -15,11 +16,12 @@ function buildSVG(size, el) {
       c.cy(arr[1]);
 
       // Style it
-      c.fill({ color: "#fff", opacity: 0.0 });
+      c.fill("none");
       c.stroke({
         width: 0.04 * size,
         color: "#000",
       });
+      let path = c.toPath();
     }
   );
 }

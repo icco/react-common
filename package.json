@@ -1,14 +1,15 @@
 {
   "name": "@icco/react-common",
-  "version": "2019.06.30-7",
+  "version": "2019.7.5-2",
   "private": false,
   "dependencies": {
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@svgdotjs/svg.js": "^3.0.1",
+    "@svgdotjs/svg.topath.js": "^2.0.3",
     "prop-types": "^15.7",
     "react": "^16.8",
     "react-dom": "^16.8",
     "react-loading": "^2.0",
-    "react-p5-wrapper": "^0.0.4",
+    "vivus": "^0.4.4",
     "webpack": "^4.35.0"
   },
   "scripts": {

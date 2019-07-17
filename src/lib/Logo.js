@@ -1,65 +1,51 @@
-const P5Wrapper = require("react-p5-wrapper");
+import React from "react";
+import { SVG } from "@svgdotjs/svg.js";
+import "@svgdotjs/svg.topath.js";
+import Vivus from "vivus"
 
-// spinning logo
-function sketch(size) {
-  return p => {
-    let t = 0;
-    let rand = [];
+// This modifies the DOM, as such, can only be called from componentDidMount.
+function buildSVG(size, el) {
+  let canvas = SVG().addTo(el).size(size, size);
+  canvas.id("logo")
+  let k = size / 4;
+  [[k * 1, k * 1], [k * 3, k * 1], [k * 1, k * 3], [k * 3, k * 3]].forEach(
+    function(arr, i) {
+      // Set the radius
+      let c = canvas.circle(size / 4.0 + size / 10.0);
 
-    p.setup = function() {
-      p.createCanvas(size, size);
-      p.background(256, 0);
+      // Put it where we want to
+      c.cx(arr[0]);
+      c.cy(arr[1]);
 
-      p.noStroke();
-      p.fill(51);
-      rand = [
-        p.random(-180, 180),
-        p.random(-180, 180),
-        p.random(-180, 180),
-        p.random(-180, 180),
-      ];
-    };
-
-    p.draw = function() {
-      var k = p.width / 4;
-
-      [[k * 1, k * 1], [k * 3, k * 1], [k * 1, k * 3], [k * 3, k * 3]].forEach(
-        function(arr, i) {
-          let x = arr[0];
-          let y = arr[1];
-          let r = rand[i];
-
-          // each particle moves in a circle
-          let myX = x + 0.15 * p.width * p.cos(2 * p.PI * t + r);
-          let myY = y + 0.15 * p.width * p.sin(2 * p.PI * t + r);
-
-          p.ellipse(myX, myY, 0.04 * p.width); // draw particle
-        }
-      );
-
-      t = t + 0.01; // update time
-    };
-  };
+      // Style it
+      c.fill("none");
+      c.stroke({
+        width: 0.04 * size,
+        color: "#000",
+      });
+      let path = c.toPath();
+    }
+  );
 }
 
-function round(x) {
-  return Number.parseFloat(x).toFixed(4);
-}
-
-const Link = params => {
-  let size = 200;
-  if (params.size) {
-    size = params.size;
+class Logo extends React.Component {
+  componentDidMount() {
+    const { size } = this.props;
+    buildSVG(size, this.refs.svg);
+    new Vivus("logo", { duration: 200 });
   }
 
-  return (
-    <div
-      className={params.className}
-      style={{ width: `${size}px`, height: `${size}px` }}
-    >
-      <P5Wrapper sketch={sketch(size)} />
-    </div>
-  );
-};
+  render() {
+    const { size } = this.props;
 
-export default Link;
+    return (
+      <div
+        style={{ width: `${size}px`, height: `${size}px` }}
+        className={this.props.className}
+        ref="svg"
+      />
+    );
+  }
+}
+
+export default Logo;

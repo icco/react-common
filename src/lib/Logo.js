@@ -1,12 +1,14 @@
 import React from "react";
 import { SVG } from "@svgdotjs/svg.js";
 import "@svgdotjs/svg.topath.js";
-import Vivus from "vivus"
+import Vivus from "vivus";
 
 // This modifies the DOM, as such, can only be called from componentDidMount.
 function buildSVG(size, el) {
-  let canvas = SVG().addTo(el).size(size, size);
-  canvas.id("logo")
+  let canvas = SVG()
+    .addTo(el)
+    .size(size, size);
+  canvas.id("logo");
   let k = size / 4;
   [[k * 1, k * 1], [k * 3, k * 1], [k * 1, k * 3], [k * 3, k * 3]].forEach(
     function(arr, i) {

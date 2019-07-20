@@ -1,0 +1,7 @@
+steps:
+- name: node:alpine
+  entrypoint: yarn
+  args: ['install']
+- name: node:alpine
+  entrypoint: yarn
+  args: ['run', 'build']

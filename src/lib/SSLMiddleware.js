@@ -1,9 +1,9 @@
 module.exports = function() {
-  environments = ['production'];
+  environments = ["production"];
   status = 302;
   return function(req, res, next) {
     if (environments.indexOf(process.env.NODE_ENV) >= 0) {
-      if (req.get('x-forwarded-proto') != 'https' && req.path != "/healthz") {
+      if (req.get("x-forwarded-proto") != "https" && req.path != "/healthz") {
         res.redirect(status, `https://${req.hostname}${req.originalUrl}`);
       } else {
         next();

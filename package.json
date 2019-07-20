@@ -1,6 +1,6 @@
 {
   "name": "@icco/react-common",
-  "version": "2019.7.17-1",
+  "version": "2019.7.20-1",
   "private": false,
   "dependencies": {
     "@svgdotjs/svg.js": "^3.0.1",

@@ -6,7 +6,7 @@ module.exports = function() {
       if (
         req.get("x-forwarded-proto") != "https" &&
         req.path != "/healthz" &&
-        req.host != "localhost"
+        req.hostname != "localhost"
       ) {
         res.redirect(status, `https://${req.hostname}${req.originalUrl}`);
       } else {

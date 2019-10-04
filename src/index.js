@@ -13,5 +13,5 @@ export {
   Logo,
   NELMiddleware,
   ReportToMiddleware,
-  SSLMiddleware
+  SSLMiddleware,
 };

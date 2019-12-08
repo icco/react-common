@@ -13,21 +13,19 @@ function buildSVG(size) {
     [k * 1, k * 3],
     [k * 3, k * 3],
   ].forEach(function(arr, i) {
-    // Set the radius
-    let rx = size / 4.0 + size / 10.0;
-    let ry = rx;
+    let r = (k / 2.0) + (size / 20.0);
     let cx = arr[0];
     let cy = arr[1];
 
     let path = pathArrayToString([
-      ["M", cx - rx, cy],
-      ["A", rx, ry, 0, 0, 0, cx + rx, cy],
-      ["A", rx, ry, 0, 0, 0, cx - rx, cy],
+      ["M", cx - r, cy],
+      ["A", r, r, 0, 0, 0, cx + r, cy],
+      ["A", r, r, 0, 0, 0, cx - r, cy],
       ["z"],
     ]);
 
     paths[i] = (
-      <path stroke="#000" strokeWidth={0.04 * size} fill="none" d={path} />
+      <path stroke="#000" strokeWidth={0.04 * size} fill="none" d={path} key={i} />
     );
   });
 

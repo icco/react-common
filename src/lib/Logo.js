@@ -1,14 +1,11 @@
 import React from "react";
-import { SVG } from "@svgdotjs/svg.js";
-import "@svgdotjs/svg.topath.js";
 import Vivus from "vivus";
 
 // This modifies the DOM, as such, can only be called from componentDidMount.
-function buildSVG(size, el) {
-  let canvas = SVG()
-    .addTo(el)
-    .size(size, size);
-  canvas.id("logo");
+function buildSVG(size) {
+  let viewBox = [0, 0, size, size].join(" ");
+  let paths = [];
+
   let k = size / 4;
   [
     [k * 1, k * 1],
@@ -17,27 +14,76 @@ function buildSVG(size, el) {
     [k * 3, k * 3],
   ].forEach(function(arr, i) {
     // Set the radius
-    let c = canvas.circle(size / 4.0 + size / 10.0);
+    let rx = size / 4.0 + size / 10.0;
+    let ry = rx;
+    let cx=arr[0];
+    let cy=arr[1];
 
-    // Put it where we want to
-    c.cx(arr[0]);
-    c.cy(arr[1]);
+        let path = pathArrayToString([
+        ['M', cx - rx, cy],
+        ['A', rx, ry, 0, 0, 0, cx + rx, cy],
+        ['A', rx, ry, 0, 0, 0, cx - rx, cy],
+        ['z']
+      ])
 
-    // Style it
-    c.fill("none");
-    c.stroke({
-      width: 0.04 * size,
-      color: "#000",
-    });
-    let path = c.toPath();
+    paths[i] = (
+      <path stroke="#000" strokeWidth={0.04 * size} fill="none" d={path} />
+    );
   });
+
+  return (
+    <svg
+      xmlns="http://www.w3.org/svg/2000"
+      viewBox={viewBox}
+      width={size}
+      height={size}
+      id="logo"
+    >
+      {paths}
+    </svg>
+  );
 }
+
+function pathArrayToString (a) {
+  for (var i = 0, il = a.length, s = ''; i < il; i++) {
+    s += a[i][0]
+
+    if (a[i][1] != null) {
+      s += a[i][1]
+
+      if (a[i][2] != null) {
+        s += ' '
+        s += a[i][2]
+
+        if (a[i][3] != null) {
+          s += ' '
+          s += a[i][3]
+          s += ' '
+          s += a[i][4]
+
+          if (a[i][5] != null) {
+            s += ' '
+            s += a[i][5]
+            s += ' '
+            s += a[i][6]
+
+            if (a[i][7] != null) {
+              s += ' '
+              s += a[i][7]
+            }
+          }
+        }
+      }
+    }
+  }
+
+  return s + ' '
+}
+
 
 class Logo extends React.Component {
   componentDidMount() {
     const { size } = this.props;
-    this.svgRef = React.createRef();
-    buildSVG(size, this.svgRef);
     new Vivus("logo", { duration: 200 });
   }
 
@@ -48,8 +94,9 @@ class Logo extends React.Component {
       <div
         style={{ width: `${size}px`, height: `${size}px` }}
         className={this.props.className}
-        ref={this.svgRef}
-      />
+      >
+        {buildSVG(size)}
+      </div>
     );
   }
 }

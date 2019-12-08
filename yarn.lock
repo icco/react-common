@@ -690,18 +690,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@svgdotjs/svg.js@^3.0.10", "@svgdotjs/svg.js@^3.0.16":
-  version "3.0.16"
-  resolved "https://registry.yarnpkg.com/@svgdotjs/svg.js/-/svg.js-3.0.16.tgz#7044754e45daf62c8e2b115c45ca33ca5b967aff"
-  integrity sha512-yZ4jfP/SeLHEnCi9PIrzienKCrA4vW9+jm5uUV3N5DG2e9zgXLY5FgywK2u8/gMFIeKO0HuqTLFFfWJj+MfMLA==
-
-"@svgdotjs/svg.topath.js@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@svgdotjs/svg.topath.js/-/svg.topath.js-2.0.3.tgz#c03e2a939acb8ef083befa9dd74dadd26f97e5c5"
-  integrity sha512-vZG+4DpzjhkjCT9LJqg+cMCekJIGSUTpOEfbQN/wueSaiP7N04JFXYW4X3lj1MlZDNU9IcE1GsWEuwdhLJJGuA==
-  dependencies:
-    "@svgdotjs/svg.js" "^3.0.10"
-
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"

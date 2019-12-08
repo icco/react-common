@@ -34,14 +34,10 @@ function buildSVG(size, el) {
 }
 
 class Logo extends React.Component {
-  constructor(props) {
-    super(props);
-    this.myRef = React.createRef();
-  }
-
   componentDidMount() {
     const { size } = this.props;
-    buildSVG(size, this.refs.svg);
+    this.svgRef = React.createRef();
+    buildSVG(size, this.svgRef);
     new Vivus("logo", { duration: 200 });
   }
 
@@ -52,7 +48,7 @@ class Logo extends React.Component {
       <div
         style={{ width: `${size}px`, height: `${size}px` }}
         className={this.props.className}
-        ref={this.myRef}
+        ref={this.svgRef}
       />
     );
   }

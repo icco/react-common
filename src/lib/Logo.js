@@ -16,15 +16,15 @@ function buildSVG(size) {
     // Set the radius
     let rx = size / 4.0 + size / 10.0;
     let ry = rx;
-    let cx=arr[0];
-    let cy=arr[1];
+    let cx = arr[0];
+    let cy = arr[1];
 
-        let path = pathArrayToString([
-        ['M', cx - rx, cy],
-        ['A', rx, ry, 0, 0, 0, cx + rx, cy],
-        ['A', rx, ry, 0, 0, 0, cx - rx, cy],
-        ['z']
-      ])
+    let path = pathArrayToString([
+      ["M", cx - rx, cy],
+      ["A", rx, ry, 0, 0, 0, cx + rx, cy],
+      ["A", rx, ry, 0, 0, 0, cx - rx, cy],
+      ["z"],
+    ]);
 
     paths[i] = (
       <path stroke="#000" strokeWidth={0.04 * size} fill="none" d={path} />
@@ -44,32 +44,32 @@ function buildSVG(size) {
   );
 }
 
-function pathArrayToString (a) {
-  for (var i = 0, il = a.length, s = ''; i < il; i++) {
-    s += a[i][0]
+function pathArrayToString(a) {
+  for (var i = 0, il = a.length, s = ""; i < il; i++) {
+    s += a[i][0];
 
     if (a[i][1] != null) {
-      s += a[i][1]
+      s += a[i][1];
 
       if (a[i][2] != null) {
-        s += ' '
-        s += a[i][2]
+        s += " ";
+        s += a[i][2];
 
         if (a[i][3] != null) {
-          s += ' '
-          s += a[i][3]
-          s += ' '
-          s += a[i][4]
+          s += " ";
+          s += a[i][3];
+          s += " ";
+          s += a[i][4];
 
           if (a[i][5] != null) {
-            s += ' '
-            s += a[i][5]
-            s += ' '
-            s += a[i][6]
+            s += " ";
+            s += a[i][5];
+            s += " ";
+            s += a[i][6];
 
             if (a[i][7] != null) {
-              s += ' '
-              s += a[i][7]
+              s += " ";
+              s += a[i][7];
             }
           }
         }
@@ -77,9 +77,8 @@ function pathArrayToString (a) {
     }
   }
 
-  return s + ' '
+  return s + " ";
 }
-
 
 class Logo extends React.Component {
   componentDidMount() {

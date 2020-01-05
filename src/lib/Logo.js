@@ -13,7 +13,7 @@ function buildSVG(size) {
     [k * 1, k * 3],
     [k * 3, k * 3],
   ].forEach(function(arr, i) {
-    let r = (k / 2.0) + (size / 20.0);
+    let r = k / 2.0 + size / 20.0;
     let cx = arr[0];
     let cy = arr[1];
 
@@ -25,7 +25,13 @@ function buildSVG(size) {
     ]);
 
     paths[i] = (
-      <path stroke="#000" strokeWidth={0.04 * size} fill="none" d={path} key={i} />
+      <path
+        stroke="#000"
+        strokeWidth={0.04 * size}
+        fill="none"
+        d={path}
+        key={i}
+      />
     );
   });
 

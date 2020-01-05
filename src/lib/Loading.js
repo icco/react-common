@@ -1,7 +1,7 @@
 import React from "react";
 import ReactLoading from "react-loading";
 
-const Loading = ({height, width, className}) => (
+const Loading = ({ height, width, className }) => (
   <ReactLoading
     key="loading"
     type={"bars"}

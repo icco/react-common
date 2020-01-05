@@ -1,13 +1,13 @@
 import React from "react";
 import ReactLoading from "react-loading";
 
-const Loading = () => (
+const Loading = ({height, width, className}) => (
   <ReactLoading
     key="loading"
     type={"bars"}
-    height={64}
-    width={64}
-    className="center dark-grey w3"
+    height={height || 64}
+    width={width || 64}
+    className={className || "center dark-grey w3"}
     style={{ fill: "#333" }}
   />
 );

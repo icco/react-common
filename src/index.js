@@ -5,6 +5,9 @@ import Logo from "./lib/Logo";
 import NELMiddleware from "./lib/NELMiddleware";
 import ReportToMiddleware from "./lib/ReportToMiddleware";
 import SSLMiddleware from "./lib/SSLMiddleware";
+import { createApolloClient } from "./lib/apollo-create";
+import { useLoggedIn, getToken } from "./lib/auth"
+import { withApollo } from "./lib/apollo"
 
 export {
   ErrorMessage,
@@ -14,4 +17,8 @@ export {
   NELMiddleware,
   ReportToMiddleware,
   SSLMiddleware,
+  createApolloClient,
+  getToken,
+  useLoggedIn,
+  withApollo,
 };

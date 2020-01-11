@@ -3,7 +3,7 @@ import { useAuth } from "use-auth0-hooks";
 import { useLazyQuery } from "@apollo/react-hooks";
 import { useLocalStorage } from "react-use";
 
-export const whoami = gql`
+const whoami = gql`
   query user {
     whoami {
       id

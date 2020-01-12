@@ -6,6 +6,7 @@ module.exports = {
     path: path.resolve(__dirname, "build"),
     filename: "index.js",
     libraryTarget: "commonjs2",
+    globalObject: "this",
   },
   module: {
     rules: [

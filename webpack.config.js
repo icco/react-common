@@ -5,9 +5,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "index.js",
-    library: 'react-common',
+    library: "react-common",
     libraryTarget: "commonjs",
-    globalObject: 'this', //  add this option
+    globalObject: "this", //  add this option
   },
   module: {
     rules: [

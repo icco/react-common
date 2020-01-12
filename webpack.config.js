@@ -5,14 +5,12 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "index.js",
-    library: "react-common",
-    libraryTarget: "commonjs",
-    globalObject: "this", //  add this option
+    libraryTarget: "commonjs2",
   },
   module: {
     rules: [
       {
-        test: /\.m?jsx?$/,
+        test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: "babel-loader",

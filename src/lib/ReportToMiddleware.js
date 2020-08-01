@@ -1,5 +1,5 @@
-module.exports = function(app) {
-  return function(req, res, next) {
+module.exports = function (app) {
+  return function (req, res, next) {
     res.setHeader(
       "Report-To",
       JSON.stringify({

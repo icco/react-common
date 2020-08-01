@@ -1,7 +1,7 @@
-module.exports = function() {
+module.exports = function () {
   environments = ["production"];
   status = 302;
-  return function(req, res, next) {
+  return function (req, res, next) {
     if (environments.indexOf(process.env.NODE_ENV) >= 0) {
       if (
         req.get("x-forwarded-proto") != "https" &&

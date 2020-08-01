@@ -12,7 +12,7 @@ function buildSVG(size) {
     [k * 3, k * 1],
     [k * 1, k * 3],
     [k * 3, k * 3],
-  ].forEach(function(arr, i) {
+  ].forEach(function (arr, i) {
     let r = k / 2.0 + size / 20.0;
     let cx = arr[0];
     let cy = arr[1];

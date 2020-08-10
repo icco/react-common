@@ -36,6 +36,6 @@ module.exports = {
     ],
   },
   externals: {
-    react: "commonjs React",
+    react: "commonjs react",
   },
 };

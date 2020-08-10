@@ -3,6 +3,7 @@
   "version": "2020.8.1-4",
   "private": false,
   "dependencies": {
+    "@babel/preset-react": "^7.10.4",
     "prop-types": "^15.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

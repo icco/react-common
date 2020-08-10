@@ -1,6 +1,6 @@
 {
   "name": "@icco/react-common",
-  "version": "2020.8.1-4",
+  "version": "2020.8.10-1",
   "private": false,
   "dependencies": {
     "@babel/preset-react": "^7.10.4",

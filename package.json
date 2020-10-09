@@ -8,7 +8,7 @@
     "react-dom": "^16.13.1",
     "react-loading": "^2.0",
     "vivus": "^0.4.5",
-    "webpack": "^4.42.1"
+    "webpack": "^4.44.2"
   },
   "scripts": {
     "start": "webpack --watch",

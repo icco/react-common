@@ -5,8 +5,6 @@ script: yarn run build
 deploy:
   provider: npm
   email: nat@natwelch.com
-  api_key:
-    secure: N6Qz6TyqD0xKWJvaSydc1bn50A4banl5SuW8PJUBJ4iMD5YygN7o+FWKLQi6TCuZfQCzyW7ztqXImDbrJqr4BTwqmHWrQ4Mt6rRf/LlKYNGYNzqlVfhm6wR7Z8mZku9z7OAV80EsxkQJFnCMI95JFZWP4Psyjuff6lHqLg5yBhz9SLW4oMAG+Srmg1DVKP/UZrKw/ykfSSqQO42A5g5rxiPiT/XutvgrvF+PL3YUgvYPjfezeyr37wCIEFU0m0Gy2pzL89x9CNmBWwmHojObjkCIXqbWWXcWwg4kiQxlLE45bZqDXyKiPej3EohONT2pqml3sd2q0IKArOwewFrxlBAOXF5I2Jt5MHsow26s8S3VoB5stTDoufQ1ZZyc3pZ1vruycm7zuxKPDN5+wUoWoqNGP/Zjm7UAzMiaH4/Iy/DHVRfYyNdkr0PfxvQ4RFCZtOJS4VrTan27ovS0szY8MLp93+RhkjUXGisDMTW0eddO2khe1AvZcM/KE7q6KgaFQzhzkx4LIxm5udmL9M7oRj4orcHF+Jh5rTLx1D/IvSaCuNs/QsXzFunQUOStIQGxDVyq0DGJA7ITViJLAthzd7GJYICdGx6yeHq9lfGxd5rVAQ7ymgXrpxDwgTpcKamM0pdvLeqDYUv9Lt3peQr0Kpf18qopzzf7lC+cd7CRo+s=
   on:
     tags: true
     repo: icco/react-common

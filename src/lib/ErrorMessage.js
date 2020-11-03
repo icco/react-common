@@ -1,9 +1,12 @@
 import React from "react";
 
-export default ({ message }) => (
-  <aside key={Math.random()}>
-    {message}
-    <style>{`
+export default ({ error, message }) => {
+  console.error(error);
+
+  return (
+    <aside key={Math.random()}>
+      {message}
+      <style>{`
       aside {
         padding: 1.5em;
         font-size: 14px;
@@ -11,5 +14,6 @@ export default ({ message }) => (
         background-color: red;
       }
     `}</style>
-  </aside>
-);
+    </aside>
+  );
+};

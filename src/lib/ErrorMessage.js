@@ -1,3 +1,5 @@
+import React from "react";
+
 export default ({ message }) => (
   <aside key={Math.random()}>
     {message}

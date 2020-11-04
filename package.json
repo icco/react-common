@@ -4,8 +4,6 @@
   "private": false,
   "dependencies": {
     "prop-types": "^15.7",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
     "react-loading": "^2.0",
     "vivus": "^0.4.5",
     "webpack": "^5.0.0"
@@ -27,6 +25,10 @@
     "babel-loader": "^8.1.0",
     "prettier": "2.0.5",
     "webpack-cli": "^4.1.0"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0 || ^17.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0 || ^17.0.0"
   },
   "browserslist": {
     "production": [

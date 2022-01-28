@@ -94,10 +94,7 @@ class Logo extends React.Component {
     const { size } = this.props;
 
     return (
-      <div
-        style={{ width: `${size}px`, height: `${size}px` }}
-        className={this.props.className}
-      >
+      <div style={{ width: `${size}px`, height: `${size}px` }} {...this.props}>
         {buildSVG(size)}
       </div>
     );

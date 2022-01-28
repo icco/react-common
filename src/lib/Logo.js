@@ -26,7 +26,6 @@ function buildSVG(size) {
 
     paths[i] = (
       <path
-        stroke="#000"
         strokeWidth={0.04 * size}
         fill="none"
         d={path}

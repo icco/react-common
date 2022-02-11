@@ -30,10 +30,6 @@ function buildSVG(size) {
         d={path}
         key={i}
         style={{
-          strokeDasharray: 450,
-          strokeDashoffset: 450,
-          animation: "draw 2s linear forwards",
-          "@keyframes": "draw { to { stroke-dashoffset: 0; } }",
         }}
       />
     );

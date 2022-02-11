@@ -1,5 +1,4 @@
 import React from "react";
-import Vivus from "vivus";
 
 // This modifies the DOM, as such, can only be called from componentDidMount.
 function buildSVG(size) {
@@ -24,7 +23,20 @@ function buildSVG(size) {
       ["z"],
     ]);
 
-    paths[i] = <path strokeWidth={0.04 * size} fill="none" d={path} key={i} />;
+    paths[i] = (
+      <path
+        strokeWidth={0.04 * size}
+        fill="none"
+        d={path}
+        key={i}
+        style={{
+          strokeDasharray: 450,
+          strokeDashoffset: 450,
+          animation: "draw 2s linear forwards",
+          "@keyframes": "draw { to { stroke-dashoffset: 0; } }",
+        }}
+      />
+    );
   });
 
   return (
@@ -79,7 +91,6 @@ function pathArrayToString(a) {
 class Logo extends React.Component {
   componentDidMount() {
     const { size } = this.props;
-    new Vivus("logo", { duration: 200 });
   }
 
   render() {

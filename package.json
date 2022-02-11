@@ -5,6 +5,7 @@
   "dependencies": {
     "prop-types": "^15.7",
     "react-loading": "^2.0",
+    "vivus": "^0.4.6",
     "webpack": "^5.0.0"
   },
   "scripts": {

@@ -5,11 +5,11 @@
   "dependencies": {
     "prop-types": "^15.7",
     "react-loading": "^2.0",
-    "vivus": "^0.4.5",
     "webpack": "^5.0.0"
   },
   "scripts": {
     "start": "webpack --watch",
+    "lint": "./lint.sh",
     "build": "webpack"
   },
   "prettier": {

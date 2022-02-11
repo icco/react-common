@@ -24,14 +24,7 @@ function buildSVG(size) {
       ["z"],
     ]);
 
-    paths[i] = (
-      <path
-        strokeWidth={0.04 * size}
-        fill="none"
-        d={path}
-        key={i}
-      />
-    );
+    paths[i] = <path strokeWidth={0.04 * size} fill="none" d={path} key={i} />;
   });
 
   return (

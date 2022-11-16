@@ -7,6 +7,7 @@ deploy:
   edge: true
   email: nat@natwelch.com
   api_token: $NPM_API_TOKEN
+  cleanup: false
   on:
     tags: true
     repo: icco/react-common

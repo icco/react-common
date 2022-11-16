@@ -6,8 +6,7 @@ deploy:
   provider: npm
   edge: true
   email: nat@natwelch.com
-  api_key: $NPM_API_TOKEN
+  api_token: $NPM_API_TOKEN
   on:
     tags: true
     repo: icco/react-common
-  skip_cleanup: 'true'

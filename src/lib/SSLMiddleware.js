@@ -1,4 +1,4 @@
-module.exports = function () {
+export default function () {
   environments = ["production"];
   status = 302;
   return function (req, res, next) {

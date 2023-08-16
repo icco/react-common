@@ -1,5 +1,5 @@
 var path = require("path");
-const TypescriptDeclarationPlugin = require('typescript-declaration-webpack-plugin');
+const TypescriptDeclarationPlugin = require("typescript-declaration-webpack-plugin");
 
 module.exports = {
   mode: "production",

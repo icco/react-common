@@ -47,6 +47,5 @@
   "main": "build/index.js",
   "repository": "git@github.com:icco/react-common.git",
   "author": "Nat Welch <nat@natwelch.com>",
-  "license": "MIT",
-  "snyk": true
+  "license": "MIT"
 }

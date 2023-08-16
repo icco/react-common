@@ -1,4 +1,6 @@
 var path = require("path");
+const TypescriptDeclarationPlugin = require("typescript-declaration-webpack-plugin");
+
 module.exports = {
   mode: "production",
   entry: "./src/index.js",
@@ -24,4 +26,9 @@ module.exports = {
   externals: {
     react: "react",
   },
+  plugins: [
+    new TypescriptDeclarationPlugin({
+      // https://www.npmjs.com/package/typescript-declaration-webpack-plugin
+    }),
+  ],
 };

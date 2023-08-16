@@ -28,7 +28,7 @@ module.exports = {
   },
   plugins: [
     new TypescriptDeclarationPlugin({
-      // Options for TypescriptDeclarationPlugin (see below)
+      // https://www.npmjs.com/package/typescript-declaration-webpack-plugin
     }),
   ],
 };

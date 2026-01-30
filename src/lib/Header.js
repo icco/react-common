@@ -7,7 +7,10 @@ class Header extends React.Component {
     let prefix = <></>;
     let head = <></>;
     let nav = (
-      <a className="f6 link dib dim mr3 black mr4-ns" href="/auth/sign-in">
+      <a
+        className="text-sm inline-block mr-3 text-black hover:opacity-70 md:mr-4"
+        href="/auth/sign-in"
+      >
         Sign In
       </a>
     );
@@ -15,7 +18,10 @@ class Header extends React.Component {
     if (this.props.loggedInUser) {
       nav = (
         <>
-          <a className="f6 link dib dim mr3 black mr4-ns" href="/auth/sign-out">
+          <a
+            className="text-sm inline-block mr-3 text-black hover:opacity-70 md:mr-4"
+            href="/auth/sign-out"
+          >
             Sign Out
           </a>
         </>
@@ -24,17 +30,20 @@ class Header extends React.Component {
 
     if (this.props.noLogo) {
       prefix = (
-        <a href="/" className="link dim">
-          <Logo size={50} className="v-mid mh0-ns dib-ns center ph0 logo" />
+        <a href="/" className="hover:opacity-70">
+          <Logo
+            size={50}
+            className="align-middle mx-0 inline-block text-center px-0 logo"
+          />
         </a>
       );
     }
 
     return (
       <div>
-        <nav className="flex justify-between ttc">
-          <div className="flex items-center pa3">{prefix}</div>
-          <div className="flex-grow pa3 flex items-center">{nav}</div>
+        <nav className="flex justify-between uppercase">
+          <div className="flex items-center p-3">{prefix}</div>
+          <div className="flex-grow p-3 flex items-center">{nav}</div>
         </nav>
         {head}
       </div>

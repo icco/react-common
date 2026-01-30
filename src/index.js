@@ -1,3 +1,4 @@
+import "./styles.css";
 import ErrorMessage from "./lib/ErrorMessage";
 import Header from "./lib/Header";
 import Loading from "./lib/Loading";

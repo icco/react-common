@@ -1,6 +1,6 @@
 {
   "name": "@icco/react-common",
-  "version": "2025.1.27-1",
+  "version": "2026.3.17-1",
   "private": false,
   "dependencies": {
     "prop-types": "^15.7",

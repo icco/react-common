@@ -23,7 +23,7 @@
     "@babel/plugin-transform-react-jsx": "^7.9.4",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.26.3",
-    "@tailwindcss/postcss": "^4.1.18",
+    "@tailwindcss/postcss": "^4.2.2",
     "autoprefixer": "^10.4.23",
     "babel-loader": "^10.0.0",
     "css-loader": "^7.1.3",

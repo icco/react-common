@@ -11,6 +11,61 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
+    },
+    "./Logo": {
+      "types": "./dist/lib/Logo.d.ts",
+      "import": "./dist/lib/Logo.js",
+      "require": "./dist/lib/Logo.cjs"
+    },
+    "./ThemeProvider": {
+      "types": "./dist/lib/ThemeProvider.d.ts",
+      "import": "./dist/lib/ThemeProvider.js",
+      "require": "./dist/lib/ThemeProvider.cjs"
+    },
+    "./ThemeToggle": {
+      "types": "./dist/lib/ThemeToggle.d.ts",
+      "import": "./dist/lib/ThemeToggle.js",
+      "require": "./dist/lib/ThemeToggle.cjs"
+    },
+    "./WebVitals": {
+      "types": "./dist/lib/WebVitals.d.ts",
+      "import": "./dist/lib/WebVitals.js",
+      "require": "./dist/lib/WebVitals.cjs"
+    },
+    "./RecurseLogo": {
+      "types": "./dist/lib/RecurseLogo.d.ts",
+      "import": "./dist/lib/RecurseLogo.js",
+      "require": "./dist/lib/RecurseLogo.cjs"
+    },
+    "./Social": {
+      "types": "./dist/lib/Social.d.ts",
+      "import": "./dist/lib/Social.js",
+      "require": "./dist/lib/Social.cjs"
+    },
+    "./XXIIVVLogo": {
+      "types": "./dist/lib/XXIIVVLogo.d.ts",
+      "import": "./dist/lib/XXIIVVLogo.js",
+      "require": "./dist/lib/XXIIVVLogo.cjs"
+    },
+    "./XXIIVVRing": {
+      "types": "./dist/lib/XXIIVVRing.d.ts",
+      "import": "./dist/lib/XXIIVVRing.js",
+      "require": "./dist/lib/XXIIVVRing.cjs"
+    },
+    "./RecurseRing": {
+      "types": "./dist/lib/RecurseRing.d.ts",
+      "import": "./dist/lib/RecurseRing.js",
+      "require": "./dist/lib/RecurseRing.cjs"
+    },
+    "./ErrorMessage": {
+      "types": "./dist/lib/ErrorMessage.d.ts",
+      "import": "./dist/lib/ErrorMessage.js",
+      "require": "./dist/lib/ErrorMessage.cjs"
+    },
+    "./Loading": {
+      "types": "./dist/lib/Loading.d.ts",
+      "import": "./dist/lib/Loading.js",
+      "require": "./dist/lib/Loading.cjs"
     }
   },
   "files": [

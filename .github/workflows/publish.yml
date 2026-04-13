@@ -1,6 +1,8 @@
-name: Publish Package to npmjs
+name: Publish Package to GitHub Packages
 on:
   push:
+    branches:
+      - main
     tags:
       - '*'
 jobs:
@@ -8,16 +10,30 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write
+      packages: write
     steps:
       - uses: actions/checkout@v6
-      # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v6
         with:
-          node-version: 22.x
-          registry-url: https://registry.npmjs.org
+          node-version-file: '.nvmrc'
+          registry-url: https://npm.pkg.github.com
       - run: yarn
       - run: yarn build
-      - run: npm publish --provenance --access public
+      - name: Version and publish
+        run: |
+          DATE=$(date +%Y.%-m.%-d)
+          OLDVERSION=$(jq -r ".version" package.json)
+          OLDDATE=$(echo $OLDVERSION | sed 's/-.*$//')
+          OLDINT=$(echo $OLDVERSION | sed 's/^.*-//')
+
+          INT=1
+          if [ "${DATE}" = "${OLDDATE}" ]; then
+            INT=$(($OLDINT + 1))
+          fi
+
+          VERSION=${DATE}-${INT}
+          jq ".version = \"$VERSION\"" package.json > package.json.tmp && mv package.json.tmp package.json
+
+          npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

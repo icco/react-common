@@ -21,19 +21,19 @@ jobs:
       - run: yarn build
       - name: Version and publish
         run: |
-          DATE=$(date +%Y.%-m.%-d)
+          DATE=$(date +%Y.%-m%-d)
           OLDVERSION=$(jq -r ".version" package.json)
-          OLDDATE=$(echo $OLDVERSION | sed 's/-.*$//')
-          OLDINT=$(echo $OLDVERSION | sed 's/^.*-//')
+          OLDDATE=$(echo $OLDVERSION | sed 's/\.[^.]*$//')
+          OLDINT=$(echo $OLDVERSION | sed 's/^.*\.//')
 
           INT=1
           if [ "${DATE}" = "${OLDDATE}" ]; then
             INT=$(($OLDINT + 1))
           fi
 
-          VERSION=${DATE}-${INT}
+          VERSION=${DATE}.${INT}
           jq ".version = \"$VERSION\"" package.json > package.json.tmp && mv package.json.tmp package.json
 
-          npm publish --tag latest
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

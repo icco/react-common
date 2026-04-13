@@ -5,17 +5,17 @@ set -ex
 yarn build
 git diff --exit-code --shortstat
 
-DATE=$(date +%Y.%m.%d | sed 's/\.0/./g')
+DATE=$(date +%Y.%-m%-d)
 OLDVERSION=$(jq -r ".version" package.json)
-OLDINT=$(echo $OLDVERSION | sed 's/^.*-//')
-OLDDATE=$(echo $OLDVERSION | sed 's/-.*$//')
+OLDINT=$(echo $OLDVERSION | sed 's/^.*\.//')
+OLDDATE=$(echo $OLDVERSION | sed 's/\.[^.]*$//')
 
 INT=1
 if [[ ${DATE} == ${OLDDATE} ]]; then
   INT=$(($OLDINT + 1))
 fi
 
-VERSION=${DATE}-${INT}
+VERSION=${DATE}.${INT}
 echo $VERSION
 
 jq ".version = \"$VERSION\"" package.json | sponge package.json

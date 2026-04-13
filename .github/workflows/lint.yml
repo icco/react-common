@@ -1,0 +1,26 @@
+name: Lint
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: '.nvmrc'
+      - run: yarn install --frozen-lockfile
+      - run: yarn lint
+      - uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: 'style: auto-fix lint and formatting'
+          file_pattern: 'src/**/* *.yml *.yaml *.json .github/**/*'

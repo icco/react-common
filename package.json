@@ -73,7 +73,7 @@
   ],
   "scripts": {
     "start": "tsup --watch",
-    "lint": "./lint.sh",
+    "lint": "prettier --write '**/*.{ts,tsx,css,yml,yaml,json}'",
     "build": "tsup"
   },
   "prettier": {

@@ -34,6 +34,6 @@ jobs:
           VERSION=${DATE}-${INT}
           jq ".version = \"$VERSION\"" package.json > package.json.tmp && mv package.json.tmp package.json
 
-          npm publish
+          npm publish --tag latest
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

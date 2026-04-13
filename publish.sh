@@ -2,6 +2,7 @@
 
 set -ex
 
+yarn build
 git diff --exit-code --shortstat
 
 DATE=$(date +%Y.%m.%d | sed 's/\.0/./g')

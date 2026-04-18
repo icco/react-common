@@ -50,5 +50,4 @@ describe("SiteHeader", () => {
     render(<SiteHeader showThemeToggle={false} />);
     expect(screen.queryByRole("checkbox")).not.toBeInTheDocument();
   });
-
 });

@@ -50,9 +50,4 @@ describe("SiteHeader", () => {
     render(<SiteHeader showThemeToggle={false} />);
     expect(screen.queryByRole("checkbox")).not.toBeInTheDocument();
   });
-
-  it("renders extra content when provided", () => {
-    render(<SiteHeader extraContent={<span>Extra</span>} />);
-    expect(screen.getByText("Extra")).toBeInTheDocument();
-  });
 });

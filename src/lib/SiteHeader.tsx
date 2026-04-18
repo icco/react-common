@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import Link from "next/link";
 
 import Logo from "./Logo";
@@ -16,7 +15,6 @@ export interface SiteHeaderProps {
   showThemeToggle?: boolean;
   logoSize?: number;
   logoHref?: string;
-  extraContent?: ReactNode;
 }
 
 export function SiteHeader({
@@ -24,7 +22,6 @@ export function SiteHeader({
   showThemeToggle = true,
   logoSize = 50,
   logoHref = "/",
-  extraContent,
 }: SiteHeaderProps) {
   return (
     <header>
@@ -35,7 +32,6 @@ export function SiteHeader({
           </Link>
         </div>
         <div className="grow" />
-        {extraContent && <div className="px-8">{extraContent}</div>}
         {(showThemeToggle || links.length > 0) && (
           <div className="flex items-center gap-4 px-8">
             {showThemeToggle && <ThemeToggle />}

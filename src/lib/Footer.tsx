@@ -90,7 +90,11 @@ export const Footer = ({
           {showSocial && (
             <nav className="gap-4">
               <h6 className="footer-title">Social</h6>
-              <Social includeWebring={false} size={24} />
+              <Social
+                includeWebring={false}
+                size={24}
+                className="flex flex-wrap items-center -mx-2"
+              />
             </nav>
           )}
           {showRecurseRing && (

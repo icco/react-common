@@ -34,7 +34,7 @@ function buildSVG(size: number, svgId: string): React.JSX.Element {
 
   return (
     <svg
-      xmlns="http://www.w3.org/svg/2000"
+      xmlns="http://www.w3.org/2000/svg"
       viewBox={viewBox}
       width={size}
       height={size}

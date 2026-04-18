@@ -27,9 +27,9 @@ export default function ThemeToggle({
           value={resolvedTheme}
         />
 
-        <SunIcon className="swap-off h-4 w-4" />
+        <SunIcon className="swap-off h-4 w-4" width={16} height={16} />
 
-        <MoonIcon className="swap-on h-4 w-4" />
+        <MoonIcon className="swap-on h-4 w-4" width={16} height={16} />
       </label>
     </>
   );

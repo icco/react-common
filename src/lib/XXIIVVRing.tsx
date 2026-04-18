@@ -64,7 +64,7 @@ export const XXIIVVRing: React.FC = async () => {
         href={ring ? ring.prev : "https://webring.xxiivv.com/"}
       >
         <span className="flex items-center gap-2">
-          <ArrowLeftCircleIcon className="h-4 w-4" /> Previous Site
+          <ArrowLeftCircleIcon className="h-4 w-4" width={16} height={16} /> Previous Site
         </span>
       </a>
       <a
@@ -73,7 +73,7 @@ export const XXIIVVRing: React.FC = async () => {
         href={ring ? ring.rand : "https://lieu.cblgh.org/random"}
       >
         <span className="flex items-center gap-2">
-          <QuestionMarkCircleIcon className="h-4 w-4" /> Random Site
+          <QuestionMarkCircleIcon className="h-4 w-4" width={16} height={16} /> Random Site
         </span>
       </a>
       <a
@@ -82,7 +82,7 @@ export const XXIIVVRing: React.FC = async () => {
         href={ring ? ring.next : "https://webring.xxiivv.com/"}
       >
         <span className="flex items-center gap-2">
-          <ArrowRightCircleIcon className="h-4 w-4" /> Next Site
+          <ArrowRightCircleIcon className="h-4 w-4" width={16} height={16} /> Next Site
         </span>
       </a>
     </>

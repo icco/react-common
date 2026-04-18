@@ -66,6 +66,16 @@
       "types": "./dist/lib/Loading.d.ts",
       "import": "./dist/lib/Loading.js",
       "require": "./dist/lib/Loading.cjs"
+    },
+    "./Footer": {
+      "types": "./dist/lib/Footer.d.ts",
+      "import": "./dist/lib/Footer.js",
+      "require": "./dist/lib/Footer.cjs"
+    },
+    "./SiteHeader": {
+      "types": "./dist/lib/SiteHeader.d.ts",
+      "import": "./dist/lib/SiteHeader.js",
+      "require": "./dist/lib/SiteHeader.cjs"
     }
   },
   "files": [

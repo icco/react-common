@@ -14,6 +14,8 @@ export default defineConfig({
     "src/lib/RecurseRing.tsx",
     "src/lib/ErrorMessage.tsx",
     "src/lib/Loading.tsx",
+    "src/lib/Footer.tsx",
+    "src/lib/SiteHeader.tsx",
   ],
   format: ["esm", "cjs"],
   dts: true,

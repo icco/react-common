@@ -6,7 +6,9 @@ import { ErrorMessage } from "./ErrorMessage";
 describe("ErrorMessage", () => {
   it("renders the message text", () => {
     vi.spyOn(console, "error").mockImplementation(() => {});
-    render(<ErrorMessage error={new Error("oops")} message="Something broke" />);
+    render(
+      <ErrorMessage error={new Error("oops")} message="Something broke" />
+    );
     expect(screen.getByText("Something broke")).toBeInTheDocument();
   });
 

@@ -36,7 +36,9 @@ describe("SiteHeader", () => {
 
   it("does not render nav links when none are provided", () => {
     render(<SiteHeader links={[]} />);
-    expect(screen.queryByRole("link", { name: "About" })).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole("link", { name: "About" })
+    ).not.toBeInTheDocument();
   });
 
   it("renders the theme toggle by default", () => {

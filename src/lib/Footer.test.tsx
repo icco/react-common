@@ -37,7 +37,11 @@ describe("Footer", () => {
 
   it("hides the social section when all social flags are off", () => {
     render(
-      <Footer showSocial={false} showRecurseRing={false} showXXIIVVRing={false} />
+      <Footer
+        showSocial={false}
+        showRecurseRing={false}
+        showXXIIVVRing={false}
+      />
     );
     expect(screen.queryByText("Social")).not.toBeInTheDocument();
   });

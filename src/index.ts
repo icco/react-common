@@ -1,13 +1,17 @@
-export { default as Logo } from "./lib/Logo"
-export type { LogoProps } from "./lib/Logo"
-export { ThemeProvider } from "./lib/ThemeProvider"
-export { default as ThemeToggle } from "./lib/ThemeToggle"
-export { WebVitals } from "./lib/WebVitals"
-export type { WebVitalsProps } from "./lib/WebVitals"
-export { RecurseLogo } from "./lib/RecurseLogo"
-export { Social } from "./lib/Social"
-export { XXIIVVLogo } from "./lib/XXIIVVLogo"
-export { XXIIVVRing } from "./lib/XXIIVVRing"
-export { RecurseRing } from "./lib/RecurseRing"
-export { ErrorMessage } from "./lib/ErrorMessage"
-export { Loading } from "./lib/Loading"
+export { default as Logo } from "./lib/Logo";
+export type { LogoProps } from "./lib/Logo";
+export { ThemeProvider } from "./lib/ThemeProvider";
+export { default as ThemeToggle } from "./lib/ThemeToggle";
+export { WebVitals } from "./lib/WebVitals";
+export type { WebVitalsProps } from "./lib/WebVitals";
+export { RecurseLogo } from "./lib/RecurseLogo";
+export { Social } from "./lib/Social";
+export { XXIIVVLogo } from "./lib/XXIIVVLogo";
+export { XXIIVVRing } from "./lib/XXIIVVRing";
+export { RecurseRing } from "./lib/RecurseRing";
+export { ErrorMessage } from "./lib/ErrorMessage";
+export { Loading } from "./lib/Loading";
+export { Footer } from "./lib/Footer";
+export type { FooterProps } from "./lib/Footer";
+export { SiteHeader } from "./lib/SiteHeader";
+export type { SiteHeaderProps, NavLink } from "./lib/SiteHeader";

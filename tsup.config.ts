@@ -1,4 +1,4 @@
-import { defineConfig } from "tsup"
+import { defineConfig } from "tsup";
 
 export default defineConfig({
   entry: [
@@ -14,6 +14,8 @@ export default defineConfig({
     "src/lib/RecurseRing.tsx",
     "src/lib/ErrorMessage.tsx",
     "src/lib/Loading.tsx",
+    "src/lib/Footer.tsx",
+    "src/lib/SiteHeader.tsx",
   ],
   format: ["esm", "cjs"],
   dts: true,
@@ -21,4 +23,4 @@ export default defineConfig({
   clean: true,
   bundle: false,
   outDir: "dist",
-})
+});

@@ -1,15 +1,17 @@
-import { XXIIVVLogo } from "./XXIIVVLogo"
+import { XXIIVVLogo } from "./XXIIVVLogo";
 
 export const Social = ({
   size = 32,
   includeWebring = true,
+  className = "flex items-center",
 }: {
-  size?: number
-  includeWebring?: boolean
+  size?: number;
+  includeWebring?: boolean;
+  className?: string;
 }) => {
-  const style = "mx-2 hover:text-link"
+  const style = "mx-2 hover:text-link";
   return (
-    <nav className="flex items-center justify-center">
+    <nav className={className}>
       <a
         href="https://github.com/icco"
         title="GitHub"
@@ -209,5 +211,5 @@ export const Social = ({
         </svg>
       </a>
     </nav>
-  )
-}
+  );
+};

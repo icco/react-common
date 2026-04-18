@@ -2,59 +2,59 @@ import {
   ArrowLeftCircleIcon,
   ArrowRightCircleIcon,
   QuestionMarkCircleIcon,
-} from "@heroicons/react/24/outline"
-import { JSDOM } from "jsdom"
+} from "@heroicons/react/24/outline";
+import { JSDOM } from "jsdom";
 
 const fetchSites = async (): Promise<{
-  prev: string
-  rand: string
-  next: string
+  prev: string;
+  rand: string;
+  next: string;
 } | null> => {
   try {
-    const response = await fetch("https://webring.xxiivv.com/")
-    const html = await response.text()
+    const response = await fetch("https://webring.xxiivv.com/");
+    const html = await response.text();
 
-    const dom = new JSDOM(html)
-    const doc = dom.window.document
+    const dom = new JSDOM(html);
+    const doc = dom.window.document;
     const sites = Array.from(doc.querySelectorAll("body > ol > li")).map(
       (li: Element) => {
-        const a = li.getElementsByTagName("a")[0]
+        const a = li.getElementsByTagName("a")[0];
         return {
           website_uuid: li.id,
           url: a.href,
-        }
+        };
       }
-    )
+    );
 
-    const currentUUID = "105"
+    const currentUUID = "105";
     const currentIndex = sites.findIndex(
       (site) => site.website_uuid === currentUUID
-    )
+    );
 
     if (currentIndex !== -1) {
-      const prevIndex = (currentIndex - 1 + sites.length) % sites.length
-      const nextIndex = (currentIndex + 1) % sites.length
-      let randIndex = Math.floor(Math.random() * sites.length)
+      const prevIndex = (currentIndex - 1 + sites.length) % sites.length;
+      const nextIndex = (currentIndex + 1) % sites.length;
+      let randIndex = Math.floor(Math.random() * sites.length);
 
       if (randIndex === currentIndex) {
-        randIndex = (randIndex + 1) % sites.length
+        randIndex = (randIndex + 1) % sites.length;
       }
 
       return {
         prev: sites[prevIndex].url,
         rand: sites[randIndex].url,
         next: sites[nextIndex].url,
-      }
+      };
     }
   } catch (error) {
-    console.error("Error fetching ring data:", error)
+    console.error("Error fetching ring data:", error);
   }
 
-  return null
-}
+  return null;
+};
 
 export const XXIIVVRing: React.FC = async () => {
-  const ring = await fetchSites()
+  const ring = await fetchSites();
 
   return (
     <>
@@ -86,5 +86,5 @@ export const XXIIVVRing: React.FC = async () => {
         </span>
       </a>
     </>
-  )
-}
+  );
+};

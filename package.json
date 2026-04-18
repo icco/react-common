@@ -66,6 +66,16 @@
       "types": "./dist/lib/Loading.d.ts",
       "import": "./dist/lib/Loading.js",
       "require": "./dist/lib/Loading.cjs"
+    },
+    "./Footer": {
+      "types": "./dist/lib/Footer.d.ts",
+      "import": "./dist/lib/Footer.js",
+      "require": "./dist/lib/Footer.cjs"
+    },
+    "./SiteHeader": {
+      "types": "./dist/lib/SiteHeader.d.ts",
+      "import": "./dist/lib/SiteHeader.js",
+      "require": "./dist/lib/SiteHeader.cjs"
     }
   },
   "files": [
@@ -91,6 +101,8 @@
     "next": "^16.2.3",
     "next-themes": "^0.4.6",
     "prettier": "^3.5.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "tsup": "^8.0.0",
     "typescript": "^6.0.2"
   },
@@ -102,20 +114,7 @@
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0"
   },
-  "peerDependenciesMeta": {
-    "next-themes": {
-      "optional": true
-    },
-    "@heroicons/react": {
-      "optional": true
-    },
-    "next": {
-      "optional": true
-    },
-    "jsdom": {
-      "optional": true
-    }
-  },
+  "peerDependenciesMeta": {},
   "description": "A selection of common react components",
   "repository": {
     "type": "git",

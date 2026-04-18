@@ -2,57 +2,57 @@ import {
   ArrowLeftCircleIcon,
   ArrowRightCircleIcon,
   QuestionMarkCircleIcon,
-} from "@heroicons/react/24/outline"
+} from "@heroicons/react/24/outline";
 
 export type RingSite = {
-  website_id: number
-  website_uuid: string
-  recurse_id: number
-  website_name: string
-  is_anonymous: boolean
-  url: string
-}
+  website_id: number;
+  website_uuid: string;
+  recurse_id: number;
+  website_name: string;
+  is_anonymous: boolean;
+  url: string;
+};
 
 const fetchSites = async (): Promise<{
-  prev: string
-  rand: string
-  next: string
+  prev: string;
+  rand: string;
+  next: string;
 } | null> => {
   try {
     const response = await fetch(
       "https://raw.githack.com/Qwuke/recurse-ring/main/sites.json"
-    )
-    const sites = await response.json()
+    );
+    const sites = await response.json();
 
-    const currentUUID = "b3e98b33-7464-4211-ba0b-5cc38ebb03e9"
+    const currentUUID = "b3e98b33-7464-4211-ba0b-5cc38ebb03e9";
     const currentIndex = sites.findIndex(
       (site: RingSite) => site.website_uuid === currentUUID
-    )
+    );
 
     if (currentIndex !== -1) {
-      const prevIndex = (currentIndex - 1 + sites.length) % sites.length
-      const nextIndex = (currentIndex + 1) % sites.length
-      let randIndex = Math.floor(Math.random() * sites.length)
+      const prevIndex = (currentIndex - 1 + sites.length) % sites.length;
+      const nextIndex = (currentIndex + 1) % sites.length;
+      let randIndex = Math.floor(Math.random() * sites.length);
 
       if (randIndex === currentIndex) {
-        randIndex = (randIndex + 1) % sites.length
+        randIndex = (randIndex + 1) % sites.length;
       }
 
       return {
         prev: sites[prevIndex].url,
         rand: sites[randIndex].url,
         next: sites[nextIndex].url,
-      }
+      };
     }
   } catch (error) {
-    console.error("Error fetching ring data:", error)
+    console.error("Error fetching ring data:", error);
   }
 
-  return null
-}
+  return null;
+};
 
 export const RecurseRing: React.FC = async () => {
-  const ring = await fetchSites()
+  const ring = await fetchSites();
 
   return (
     <>
@@ -84,5 +84,5 @@ export const RecurseRing: React.FC = async () => {
         </span>
       </a>
     </>
-  )
-}
+  );
+};

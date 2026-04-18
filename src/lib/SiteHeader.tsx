@@ -28,29 +28,23 @@ export function SiteHeader({
 }: SiteHeaderProps) {
   return (
     <header>
-      <nav className="flex py-8">
+      <nav className="flex items-center py-8">
         <div className="flex-none">
           <Link href={logoHref}>
             <Logo size={logoSize} className="logo stroke-current px-8" />
           </Link>
         </div>
         <div className="grow" />
-        {extraContent && (
-          <div className="mr-8 content-center">{extraContent}</div>
-        )}
-        {showThemeToggle && (
-          <div className="mr-8 content-center">
-            <ThemeToggle />
-          </div>
-        )}
-        {links.length > 0 && (
-          <div className="flex-none content-center mr-4 flex">
+        {extraContent && <div className="px-8">{extraContent}</div>}
+        {(showThemeToggle || links.length > 0) && (
+          <div className="flex items-center gap-4 px-8">
+            {showThemeToggle && <ThemeToggle />}
             {links.map(({ name, href, prefetch, className }) => (
               <Link
                 key={name}
                 href={href}
                 prefetch={prefetch}
-                className={className ?? "mx-4"}
+                className={className}
               >
                 {name}
               </Link>

@@ -23,4 +23,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "style: auto-fix lint and formatting"
-          file_pattern: "src/**/* *.yml *.yaml *.json .github/**/*"
+          file_pattern: "src/**/* *.yml *.json .github/**/*"

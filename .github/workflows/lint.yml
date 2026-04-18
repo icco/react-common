@@ -17,10 +17,10 @@ jobs:
           ref: ${{ github.head_ref }}
       - uses: actions/setup-node@v6
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: ".nvmrc"
       - run: yarn install --frozen-lockfile
       - run: yarn lint
       - uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          commit_message: 'style: auto-fix lint and formatting'
-          file_pattern: 'src/**/* *.yml *.yaml *.json .github/**/*'
+          commit_message: "style: auto-fix lint and formatting"
+          file_pattern: "src/**/* *.yml *.yaml *.json .github/**/*"

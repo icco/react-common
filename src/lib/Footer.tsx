@@ -2,24 +2,24 @@ import {
   CodeBracketIcon,
   DocumentCheckIcon,
   PencilIcon,
-} from "@heroicons/react/24/outline"
-import Link from "next/link"
+} from "@heroicons/react/24/outline";
+import Link from "next/link";
 
-import { RecurseLogo } from "./RecurseLogo"
-import { RecurseRing } from "./RecurseRing"
-import { Social } from "./Social"
-import { XXIIVVLogo } from "./XXIIVVLogo"
-import { XXIIVVRing } from "./XXIIVVRing"
+import { RecurseLogo } from "./RecurseLogo";
+import { RecurseRing } from "./RecurseRing";
+import { Social } from "./Social";
+import { XXIIVVLogo } from "./XXIIVVLogo";
+import { XXIIVVRing } from "./XXIIVVRing";
 
 export interface FooterProps {
-  startYear?: number
-  sourceRepo?: string
-  editUrl?: string
-  showRecurseCenter?: boolean
-  showPrivacyPolicy?: boolean
-  showSocial?: boolean
-  showRecurseRing?: boolean
-  showXXIIVVRing?: boolean
+  startYear?: number;
+  sourceRepo?: string;
+  editUrl?: string;
+  showRecurseCenter?: boolean;
+  showPrivacyPolicy?: boolean;
+  showSocial?: boolean;
+  showRecurseRing?: boolean;
+  showXXIIVVRing?: boolean;
 }
 
 export const Footer = ({
@@ -32,10 +32,10 @@ export const Footer = ({
   showRecurseRing = true,
   showXXIIVVRing = true,
 }: FooterProps) => {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
   const hasIconNav =
-    editUrl || showRecurseCenter || sourceRepo || showPrivacyPolicy
-  const hasSocialSection = showSocial || showRecurseRing || showXXIIVVRing
+    editUrl || showRecurseCenter || sourceRepo || showPrivacyPolicy;
+  const hasSocialSection = showSocial || showRecurseRing || showXXIIVVRing;
 
   return (
     <footer className="mx-auto max-w-5xl pt-[14vh] pb-[8vh]">
@@ -43,9 +43,8 @@ export const Footer = ({
       <div className="footer sm:footer-horizontal items-center p-4">
         <aside className="grid-flow-col items-center">
           <p>
-            &copy;{" "}
-            {startYear ? `${startYear} - ${currentYear}` : currentYear} Nat
-            Welch. All rights reserved.
+            &copy; {startYear ? `${startYear} - ${currentYear}` : currentYear}{" "}
+            Nat Welch. All rights reserved.
           </p>
         </aside>
         {hasIconNav && (
@@ -64,11 +63,7 @@ export const Footer = ({
               </Link>
             )}
             {sourceRepo && (
-              <Link
-                className="blue ms-2"
-                href={sourceRepo}
-                title="Source Code"
-              >
+              <Link className="blue ms-2" href={sourceRepo} title="Source Code">
                 <CodeBracketIcon className="inline-block h-4 w-4" />
               </Link>
             )}
@@ -134,5 +129,5 @@ export const Footer = ({
         </div>
       )}
     </footer>
-  )
-}
+  );
+};

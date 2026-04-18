@@ -1,22 +1,22 @@
-import { ReactNode } from "react"
-import Link from "next/link"
+import { ReactNode } from "react";
+import Link from "next/link";
 
-import Logo from "./Logo"
-import ThemeToggle from "./ThemeToggle"
+import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
 
 export interface NavLink {
-  name: string
-  href: string
-  prefetch?: boolean
-  className?: string
+  name: string;
+  href: string;
+  prefetch?: boolean;
+  className?: string;
 }
 
 export interface SiteHeaderProps {
-  links?: NavLink[]
-  showThemeToggle?: boolean
-  logoSize?: number
-  logoHref?: string
-  extraContent?: ReactNode
+  links?: NavLink[];
+  showThemeToggle?: boolean;
+  logoSize?: number;
+  logoHref?: string;
+  extraContent?: ReactNode;
 }
 
 export function SiteHeader({
@@ -59,5 +59,5 @@ export function SiteHeader({
         )}
       </nav>
     </header>
-  )
+  );
 }

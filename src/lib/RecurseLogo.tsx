@@ -1,6 +1,6 @@
 export const RecurseLogo: React.FC<{
-  className?: string
-  size?: number
+  className?: string;
+  size?: number;
 }> = ({ className, size = 12 }) => {
   return (
     <svg
@@ -32,5 +32,5 @@ export const RecurseLogo: React.FC<{
       <rect x="8" y="13" width="1" height="1" fill="#fff"></rect>
       <rect x="9" y="12" width="1" height="1" fill="#fff"></rect>
     </svg>
-  )
-}
+  );
+};

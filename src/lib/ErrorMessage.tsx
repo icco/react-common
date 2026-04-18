@@ -2,12 +2,10 @@ export function ErrorMessage({
   error,
   message,
 }: {
-  error: unknown
-  message: string
+  error: unknown;
+  message: string;
 }) {
-  console.error(error)
+  console.error(error);
 
-  return (
-    <aside className="p-6 text-sm text-white bg-red-600">{message}</aside>
-  )
+  return <aside className="p-6 text-sm text-white bg-red-600">{message}</aside>;
 }

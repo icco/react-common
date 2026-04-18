@@ -1,22 +1,22 @@
-"use client"
+"use client";
 
-import { useReportWebVitals } from "next/web-vitals"
+import { useReportWebVitals } from "next/web-vitals";
 
 export type WebVitalsProps = {
-  analyticsPath: string
-}
+  analyticsPath: string;
+};
 
 export function WebVitals({ analyticsPath }: WebVitalsProps) {
   useReportWebVitals((metric) => {
-    const body = JSON.stringify(metric)
-    const url = `https://reportd.natwelch.com${analyticsPath}`
+    const body = JSON.stringify(metric);
+    const url = `https://reportd.natwelch.com${analyticsPath}`;
 
     if (navigator.sendBeacon) {
-      navigator.sendBeacon(url, body)
+      navigator.sendBeacon(url, body);
     } else {
-      fetch(url, { body, method: "POST", keepalive: true })
+      fetch(url, { body, method: "POST", keepalive: true });
     }
-  })
+  });
 
-  return <></>
+  return <></>;
 }

@@ -51,7 +51,11 @@ export const Footer = ({
           <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
             {editUrl && (
               <Link href={editUrl} title="Edit this page">
-                <PencilIcon className="inline-block h-4 w-4" width={16} height={16} />
+                <PencilIcon
+                  className="inline-block h-4 w-4"
+                  width={16}
+                  height={16}
+                />
               </Link>
             )}
             {showRecurseCenter && (
@@ -64,7 +68,11 @@ export const Footer = ({
             )}
             {sourceRepo && (
               <Link className="blue ms-2" href={sourceRepo} title="Source Code">
-                <CodeBracketIcon className="inline-block h-4 w-4" width={16} height={16} />
+                <CodeBracketIcon
+                  className="inline-block h-4 w-4"
+                  width={16}
+                  height={16}
+                />
               </Link>
             )}
             {showPrivacyPolicy && (
@@ -73,7 +81,11 @@ export const Footer = ({
                 href="https://natwelch.com/privacy"
                 title="Privacy Policy"
               >
-                <DocumentCheckIcon className="inline-block h-4 w-4" width={16} height={16} />
+                <DocumentCheckIcon
+                  className="inline-block h-4 w-4"
+                  width={16}
+                  height={16}
+                />
               </Link>
             )}
           </nav>

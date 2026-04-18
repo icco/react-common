@@ -35,9 +35,7 @@ export function SiteHeader({
           </Link>
         </div>
         <div className="grow" />
-        {extraContent && (
-          <div className="px-8">{extraContent}</div>
-        )}
+        {extraContent && <div className="px-8">{extraContent}</div>}
         {(showThemeToggle || links.length > 0) && (
           <div className="flex items-center gap-4 px-8">
             {showThemeToggle && <ThemeToggle />}

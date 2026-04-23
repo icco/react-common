@@ -123,8 +123,12 @@
     "react-dom": "^18.0.0 || ^19.0.0"
   },
   "peerDependenciesMeta": {
-    "jsdom": { "optional": true },
-    "next-themes": { "optional": true }
+    "jsdom": {
+      "optional": true
+    },
+    "next-themes": {
+      "optional": true
+    }
   },
   "sideEffects": false,
   "description": "A selection of common react components",

@@ -6,10 +6,8 @@ import {
 import Link from "next/link";
 
 import { RecurseLogo } from "./RecurseLogo";
-import { RecurseRing } from "./RecurseRing";
 import { Social } from "./Social";
 import { XXIIVVLogo } from "./XXIIVVLogo";
-import { XXIIVVRing } from "./XXIIVVRing";
 
 export interface FooterProps {
   startYear?: number;
@@ -22,7 +20,7 @@ export interface FooterProps {
   showXXIIVVRing?: boolean;
 }
 
-export const Footer = ({
+export const Footer = async ({
   startYear,
   sourceRepo,
   editUrl,
@@ -36,6 +34,15 @@ export const Footer = ({
   const hasIconNav =
     editUrl || showRecurseCenter || sourceRepo || showPrivacyPolicy;
   const hasSocialSection = showSocial || showRecurseRing || showXXIIVVRing;
+
+  const [{ RecurseRing }, { XXIIVVRing }] = await Promise.all([
+    showRecurseRing
+      ? import("./RecurseRing")
+      : Promise.resolve({ RecurseRing: null }),
+    showXXIIVVRing
+      ? import("./XXIIVVRing")
+      : Promise.resolve({ XXIIVVRing: null }),
+  ]);
 
   return (
     <footer className="mx-auto max-w-5xl pt-[14vh] pb-[8vh]">
@@ -104,7 +111,7 @@ export const Footer = ({
               />
             </nav>
           )}
-          {showRecurseRing && (
+          {showRecurseRing && RecurseRing && (
             <nav className="gap-4 md:justify-self-end">
               <h6 className="footer-title">
                 <Link
@@ -121,7 +128,7 @@ export const Footer = ({
               <RecurseRing />
             </nav>
           )}
-          {showXXIIVVRing && (
+          {showXXIIVVRing && XXIIVVRing && (
             <nav className="gap-4 md:justify-self-end">
               <h6 className="footer-title">
                 <Link

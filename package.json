@@ -1,6 +1,6 @@
 {
   "name": "@icco/react-common",
-  "version": "2026.418.4",
+  "version": "2026.423.1",
   "type": "module",
   "private": false,
   "main": "dist/index.cjs",

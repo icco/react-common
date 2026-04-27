@@ -97,6 +97,7 @@
     "trailingComma": "es5"
   },
   "dependencies": {
+    "@wrksz/themes": "^0.9.0",
     "vivus": "^0.4.6"
   },
   "devDependencies": {
@@ -109,7 +110,6 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
-    "@wrksz/themes": "^0.9.0",
     "jsdom": "^29.0.2",
     "next": "^16.2.3",
     "prettier": "^3.5.3",
@@ -121,7 +121,6 @@
   },
   "peerDependencies": {
     "@heroicons/react": "^2.0.0",
-    "@wrksz/themes": "^0.9.0",
     "jsdom": ">=20.0.0",
     "next": ">=16.0.0",
     "react": "^18.0.0 || ^19.0.0",
@@ -129,9 +128,6 @@
   },
   "peerDependenciesMeta": {
     "jsdom": {
-      "optional": true
-    },
-    "@wrksz/themes": {
       "optional": true
     }
   },

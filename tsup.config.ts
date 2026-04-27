@@ -5,6 +5,7 @@ export default defineConfig({
     "src/index.ts",
     "src/lib/Logo.tsx",
     "src/lib/ThemeProvider.tsx",
+    "src/lib/ClientThemeProvider.tsx",
     "src/lib/ThemeToggle.tsx",
     "src/lib/WebVitals.tsx",
     "src/lib/RecurseLogo.tsx",

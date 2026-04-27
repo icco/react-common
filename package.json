@@ -22,6 +22,11 @@
       "import": "./dist/lib/ThemeProvider.js",
       "require": "./dist/lib/ThemeProvider.cjs"
     },
+    "./ClientThemeProvider": {
+      "types": "./dist/lib/ClientThemeProvider.d.ts",
+      "import": "./dist/lib/ClientThemeProvider.js",
+      "require": "./dist/lib/ClientThemeProvider.cjs"
+    },
     "./ThemeToggle": {
       "types": "./dist/lib/ThemeToggle.d.ts",
       "import": "./dist/lib/ThemeToggle.js",

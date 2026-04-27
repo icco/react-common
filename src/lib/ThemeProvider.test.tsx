@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
-import { ClientThemeProvider } from "@wrksz/themes/client";
+import { ClientThemeProvider } from "./ClientThemeProvider";
 
 /**
  * The published export is `ThemeProvider` from `@wrksz/themes/next` (async Server Component).

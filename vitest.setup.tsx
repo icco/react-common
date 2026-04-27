@@ -33,7 +33,7 @@ vi.mock("next/web-vitals", () => ({
   useReportWebVitals: vi.fn(),
 }));
 
-// Mock @wrksz/themes/client (ThemeToggle)
+// Mock @wrksz/themes/client (re-exported via ClientThemeProvider.tsx)
 vi.mock("@wrksz/themes/client", () => ({
   useTheme: vi.fn(() => ({
     resolvedTheme: "light",

@@ -1,6 +1,7 @@
 export { default as Logo } from "./lib/Logo";
 export type { LogoProps } from "./lib/Logo";
 export { ThemeProvider } from "./lib/ThemeProvider";
+export { ClientThemeProvider, useTheme } from "./lib/ClientThemeProvider";
 export { default as ThemeToggle } from "./lib/ThemeToggle";
 export { WebVitals } from "./lib/WebVitals";
 export type { WebVitalsProps } from "./lib/WebVitals";

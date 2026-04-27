@@ -22,6 +22,11 @@
       "import": "./dist/lib/ThemeProvider.js",
       "require": "./dist/lib/ThemeProvider.cjs"
     },
+    "./ClientThemeProvider": {
+      "types": "./dist/lib/ClientThemeProvider.d.ts",
+      "import": "./dist/lib/ClientThemeProvider.js",
+      "require": "./dist/lib/ClientThemeProvider.cjs"
+    },
     "./ThemeToggle": {
       "types": "./dist/lib/ThemeToggle.d.ts",
       "import": "./dist/lib/ThemeToggle.js",
@@ -104,9 +109,9 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
+    "@wrksz/themes": "^0.9.0",
     "jsdom": "^29.0.2",
     "next": "^16.2.3",
-    "next-themes": "^0.4.6",
     "prettier": "^3.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -116,9 +121,9 @@
   },
   "peerDependencies": {
     "@heroicons/react": "^2.0.0",
+    "@wrksz/themes": "^0.9.0",
     "jsdom": ">=20.0.0",
-    "next": ">=14.0.0",
-    "next-themes": "^0.4.0",
+    "next": ">=16.0.0",
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0"
   },
@@ -126,7 +131,7 @@
     "jsdom": {
       "optional": true
     },
-    "next-themes": {
+    "@wrksz/themes": {
       "optional": true
     }
   },

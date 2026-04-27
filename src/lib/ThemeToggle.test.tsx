@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, it, expect, vi } from "vitest";
-import { useTheme } from "next-themes";
+import { useTheme } from "@wrksz/themes/client";
 
 import ThemeToggle from "./ThemeToggle";
 

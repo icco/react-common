@@ -33,13 +33,13 @@ vi.mock("next/web-vitals", () => ({
   useReportWebVitals: vi.fn(),
 }));
 
-// Mock next-themes
-vi.mock("next-themes", () => ({
+// Mock @wrksz/themes/client (ThemeToggle)
+vi.mock("@wrksz/themes/client", () => ({
   useTheme: vi.fn(() => ({
     resolvedTheme: "light",
     setTheme: vi.fn(),
   })),
-  ThemeProvider: ({
+  ClientThemeProvider: ({
     children,
   }: {
     children: React.ReactNode;

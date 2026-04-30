@@ -50,4 +50,19 @@ describe("SiteHeader", () => {
     render(<SiteHeader showThemeToggle={false} />);
     expect(screen.queryByRole("checkbox")).not.toBeInTheDocument();
   });
+
+  it("renders a custom brand element in place of the default logo", () => {
+    render(<SiteHeader brand={<span>MyBrand</span>} />);
+    expect(screen.getByText("MyBrand")).toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: "" })).not.toBeInTheDocument();
+  });
+
+  it("renders custom children on the right", () => {
+    render(
+      <SiteHeader>
+        <span>RightSlot</span>
+      </SiteHeader>
+    );
+    expect(screen.getByText("RightSlot")).toBeInTheDocument();
+  });
 });

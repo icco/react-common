@@ -22,7 +22,7 @@ jobs:
       - run: yarn build
       - name: Version and publish
         run: |
-          DATE=$(date +%Y.%-m%-d)
+          DATE=$(date -u +%Y.1%m%d)
           OLDVERSION=$(jq -r ".version" package.json)
           OLDDATE=$(echo $OLDVERSION | sed 's/\.[^.]*$//')
           OLDINT=$(echo $OLDVERSION | sed 's/^.*\.//')

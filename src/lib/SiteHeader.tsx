@@ -8,9 +8,6 @@ export interface NavLink {
   href: string;
   prefetch?: boolean;
   className?: string;
-  /** Optional icon rendered before the label. When provided, the label is
-   *  hidden below the `md` breakpoint and the link uses `aria-label={name}`
-   *  so the link stays accessible when icon-only. */
   icon?: React.ReactNode;
 }
 

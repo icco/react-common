@@ -65,4 +65,46 @@ describe("SiteHeader", () => {
     );
     expect(screen.getByText("RightSlot")).toBeInTheDocument();
   });
+
+  it("renders an icon when provided on a nav link", () => {
+    render(
+      <SiteHeader
+        links={[
+          {
+            name: "Posts",
+            href: "/posts",
+            icon: <svg data-testid="posts-icon" />,
+          },
+        ]}
+      />
+    );
+    expect(screen.getByTestId("posts-icon")).toBeInTheDocument();
+  });
+
+  it("collapses the label on small screens when an icon is provided", () => {
+    render(
+      <SiteHeader
+        links={[
+          {
+            name: "Posts",
+            href: "/posts",
+            icon: <svg data-testid="posts-icon" />,
+          },
+        ]}
+      />
+    );
+    const link = screen.getByRole("link", { name: "Posts" });
+    expect(link).toHaveAttribute("aria-label", "Posts");
+    const label = screen.getByText("Posts");
+    expect(label.className).toContain("hidden");
+    expect(label.className).toContain("md:inline");
+  });
+
+  it("keeps the label visible when no icon is provided", () => {
+    render(<SiteHeader links={[{ name: "Posts", href: "/posts" }]} />);
+    const link = screen.getByRole("link", { name: "Posts" });
+    expect(link).not.toHaveAttribute("aria-label");
+    const label = screen.getByText("Posts");
+    expect(label.className).not.toContain("hidden");
+  });
 });

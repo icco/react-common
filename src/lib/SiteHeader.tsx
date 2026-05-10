@@ -8,6 +8,10 @@ export interface NavLink {
   href: string;
   prefetch?: boolean;
   className?: string;
+  /** Optional icon rendered before the label. When provided, the label is
+   *  hidden below the `md` breakpoint and the link uses `aria-label={name}`
+   *  so the link stays accessible when icon-only. */
+  icon?: React.ReactNode;
 }
 
 export interface SiteHeaderProps {
@@ -52,14 +56,18 @@ export function SiteHeader({
         {hasRightContent && (
           <div className="flex items-center gap-4 px-8">
             {showThemeToggle && <ThemeToggle />}
-            {links.map(({ name, href, prefetch, className }) => (
+            {links.map(({ name, href, prefetch, className, icon }) => (
               <Link
                 key={name}
                 href={href}
                 prefetch={prefetch}
-                className={className}
+                aria-label={icon ? name : undefined}
+                className={`flex items-center gap-2 ${className ?? ""}`.trim()}
               >
-                {name}
+                {icon ? <span className="flex-none">{icon}</span> : null}
+                <span className={icon ? "hidden md:inline" : undefined}>
+                  {name}
+                </span>
               </Link>
             ))}
             {children}

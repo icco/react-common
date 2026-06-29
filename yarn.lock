@@ -892,10 +892,10 @@
     convert-source-map "^2.0.0"
     tinyrainbow "^3.1.0"
 
-"@wrksz/themes@^0.9.3":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@wrksz/themes/-/themes-0.9.3.tgz#2d2eaf7a6d8cfb15e9b9070321dc62a3c2de2a35"
-  integrity sha512-PRUeM4syP7vSnSnZwacHEK/vLGEBHfvxwoituc7J144ZnQytFIg5z26TknXWWLhYb0adhtsRlQEV+e6RIZ3AaQ==
+"@wrksz/themes@^0.9.6":
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/@wrksz/themes/-/themes-0.9.6.tgz#f6ef73aa757ec596e096ec286031d34295f589ed"
+  integrity sha512-ta5z2zIw+G0hJYn6yfmOTksRKZwMx1FIczPOwRMczf5gQ/M2aP3L7lamPC82jRmukBZkzrYFmn/v/cL5O0WDQQ==
 
 acorn@^8.16.0:
   version "8.16.0"

@@ -14,12 +14,14 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
         with:
           node-version-file: ".nvmrc"
           registry-url: https://npm.pkg.github.com
-      - run: yarn
-      - run: yarn build
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
       - name: Version and publish
         run: |
           DATE=$(date -u +%Y.1%m%d)

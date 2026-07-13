@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@wrksz/themes':
-        specifier: ^0.9.7
-        version: 0.9.7(next@16.2.10(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)
+        specifier: ^1.0.0
+        version: 1.0.0(next@16.2.10(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)
       vivus:
         specifier: ^0.4.6
         version: 0.4.6
@@ -896,8 +896,8 @@ packages:
   '@vitest/utils@4.1.10':
     resolution: {integrity: sha512-fy9am/HWxbaGt/Sawrp90vt6Y6jQwf1RX77cz3uwoJwJVMli/e1IEwRPnMNJ7vKfPTwo0diXifkpPvwH9v7nGA==}
 
-  '@wrksz/themes@0.9.7':
-    resolution: {integrity: sha512-obtcxyEEuYxGLNMf9wkBXozip5MEMwGsZJq1MkgYncilSWjWu2F6jKdcPd27myiY5cTPQELw6gEDNJaeiVLOpw==}
+  '@wrksz/themes@1.0.0':
+    resolution: {integrity: sha512-UZ1mvFe9xXvxPCK/aXKVYbJCtI4gxM9J4orvDEZLdpk/9tvcbH2U8ZU3h5R1Pwjjjf4Q3um0wK4o+wqj3Vv40Q==}
     peerDependencies:
       next: '>=16.0.0'
       react: ^18.0.0 || ^19.0.0
@@ -2148,7 +2148,7 @@ snapshots:
       convert-source-map: 2.0.0
       tinyrainbow: 3.1.0
 
-  '@wrksz/themes@0.9.7(next@16.2.10(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)':
+  '@wrksz/themes@1.0.0(next@16.2.10(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)':
     dependencies:
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)

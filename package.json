@@ -1,6 +1,6 @@
 {
   "name": "@icco/react-common",
-  "version": "2026.10720.2",
+  "version": "2026.10720.3",
   "type": "module",
   "packageManager": "pnpm@11.15.0",
   "private": false,

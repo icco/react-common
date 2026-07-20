@@ -19,7 +19,9 @@ export default defineConfig({
     "src/lib/SiteHeader.tsx",
   ],
   format: ["esm", "cjs"],
-  dts: true,
+  // Declarations are emitted by tsc (see the build script); tsup's dts
+  // support (rollup-plugin-dts) is incompatible with TypeScript 7.
+  dts: false,
   splitting: false,
   clean: true,
   bundle: false,

@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "declarationMap": false,
+    "sourceMap": false,
+    "rootDir": "src"
+  },
+  "exclude": ["src/**/*.test.tsx", "src/**/*.test.ts"]
+}

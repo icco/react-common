@@ -90,7 +90,7 @@
   "scripts": {
     "start": "tsup --watch",
     "lint": "prettier --write '**/*.{ts,tsx,css,yml,yaml,json}'",
-    "build": "tsup",
+    "build": "tsup && tsc -p tsconfig.build.json && node scripts/copy-dcts.mjs",
     "test": "vitest run",
     "test:watch": "vitest"
   },

@@ -39,19 +39,24 @@ export function SiteHeader({
     showThemeToggle || links.length > 0 || children !== undefined;
   return (
     <header>
-      <nav className="flex items-center py-8">
+      {/* Wraps rather than overflowing when a brand plus links exceed a phone
+          viewport; gutters narrow to match typical page padding there. */}
+      <nav className="flex flex-wrap items-center gap-y-2 py-6 sm:py-8">
         {brand ? (
-          <div className="flex-none px-8">{brand}</div>
+          <div className="flex-none px-4 sm:px-8">{brand}</div>
         ) : showLogo ? (
           <div className="flex-none">
             <Link href={logoHref}>
-              <Logo size={logoSize} className="logo stroke-current px-8" />
+              <Logo
+                size={logoSize}
+                className="logo stroke-current px-4 sm:px-8"
+              />
             </Link>
           </div>
         ) : null}
         <div className="grow" />
         {hasRightContent && (
-          <div className="flex items-center gap-4 px-8">
+          <div className="flex items-center gap-4 px-4 sm:px-8">
             {showThemeToggle && <ThemeToggle />}
             {links.map(({ name, href, prefetch, className, icon }) => (
               <Link

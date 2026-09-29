@@ -98,7 +98,7 @@
     "trailingComma": "es5"
   },
   "dependencies": {
-    "@wrksz/themes": "^1.2.0",
+    "@wrksz/themes": "^2.0.2",
     "vivus": "^0.4.6"
   },
   "devDependencies": {

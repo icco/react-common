@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@wrksz/themes':
-        specifier: ^1.2.0
-        version: 1.2.0(next@16.3.6(@types/node@26.6.1)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@7.0.2)
+        specifier: ^2.0.2
+        version: 2.0.2(next@16.3.6(@types/node@26.6.1)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@7.0.2)
       vivus:
         specifier: ^0.4.6
         version: 0.4.6
@@ -1016,13 +1016,13 @@ packages:
   '@vitest/spy@5.0.2':
     resolution: {integrity: sha512-Ijc7T1nT9efNb5LxvjaBrEqw3f/QwUv5EE0nKqZxgqsaV/FxAAZ8baGylA8X/Z2oS4Lp+K74Jr6dTJsDKxJDeg==}
 
-  '@wrksz/themes@1.2.0':
-    resolution: {integrity: sha512-jAyeKHnhvouLTsNCbTZXXX45gCYIJ3eLAFgktIdYHRotGz4ufhs8PMQd3baiZO0EPIXyf0vzPlasbuOfM5J5Gg==}
+  '@wrksz/themes@2.0.2':
+    resolution: {integrity: sha512-Us7orFtKm+TiTdAZyxUQgpW7yika0+IK4Ao2jN2fJskRVF4kZQhsnFXPCz/yp8kR1ku0bhBfOhic43Dh3xOldw==}
     peerDependencies:
       next: '>=16.0.0'
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
-      typescript: '>=4.5.0'
+      typescript: '>=5.9'
     peerDependenciesMeta:
       next:
         optional: true
@@ -2300,7 +2300,7 @@ snapshots:
 
   '@vitest/spy@5.0.2': {}
 
-  '@wrksz/themes@1.2.0(next@16.3.6(@types/node@26.6.1)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@7.0.2)':
+  '@wrksz/themes@2.0.2(next@16.3.6(@types/node@26.6.1)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@7.0.2)':
     dependencies:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)

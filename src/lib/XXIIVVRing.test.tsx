@@ -57,6 +57,32 @@ describe("XXIIVVRing", () => {
     );
   });
 
+  it("skips list items without a link", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn().mockResolvedValue({
+        text: () =>
+          Promise.resolve(`
+<html><body>
+<ol>
+  <li id="104"><a href="https://site-a.example.com/">Site A</a></li>
+  <li id="105"><a href="https://natwelch.com/">natwelch.com</a></li>
+  <li></li>
+  <li></li>
+</ol>
+</body></html>
+`),
+      })
+    );
+    const errorSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+    render(await XXIIVVRing({}));
+    expect(errorSpy).not.toHaveBeenCalled();
+    expect(screen.getByText("Next Site").closest("a")).toHaveAttribute(
+      "href",
+      "https://site-a.example.com/"
+    );
+  });
+
   it("renders three navigation links", async () => {
     render(await XXIIVVRing({}));
     expect(screen.getByText("Previous Site")).toBeInTheDocument();

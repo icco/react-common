@@ -16,13 +16,11 @@ const fetchSites = async (): Promise<{
 
     const dom = new JSDOM(html);
     const doc = dom.window.document;
-    const sites = Array.from(doc.querySelectorAll("body > ol > li")).map(
+    // The ring page includes empty <li> placeholders.
+    const sites = Array.from(doc.querySelectorAll("body > ol > li")).flatMap(
       (li: Element) => {
         const a = li.getElementsByTagName("a")[0];
-        return {
-          website_uuid: li.id,
-          url: a.href,
-        };
+        return a ? [{ website_uuid: li.id, url: a.href }] : [];
       }
     );
 

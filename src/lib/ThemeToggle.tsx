@@ -1,6 +1,6 @@
 "use client";
 
-import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "./ClientThemeProvider";
 
 export default function ThemeToggle({
@@ -27,9 +27,9 @@ export default function ThemeToggle({
           value={resolvedTheme}
         />
 
-        <SunIcon className="swap-off h-4 w-4" width={16} height={16} />
+        <Sun className="swap-off h-4 w-4" width={16} height={16} />
 
-        <MoonIcon className="swap-on h-4 w-4" width={16} height={16} />
+        <Moon className="swap-on h-4 w-4" width={16} height={16} />
       </label>
     </>
   );

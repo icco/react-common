@@ -1,8 +1,4 @@
-import {
-  CodeBracketIcon,
-  DocumentCheckIcon,
-  PencilIcon,
-} from "@heroicons/react/24/outline";
+import { CodeXml, FileCheck, Pencil } from "lucide-react";
 import Link from "next/link";
 
 import { RecurseLogo } from "./RecurseLogo";
@@ -58,7 +54,7 @@ export const Footer = async ({
           <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
             {editUrl && (
               <Link href={editUrl} title="Edit this page">
-                <PencilIcon
+                <Pencil
                   className="inline-block h-4 w-4"
                   width={16}
                   height={16}
@@ -75,7 +71,7 @@ export const Footer = async ({
             )}
             {sourceRepo && (
               <Link className="blue ms-2" href={sourceRepo} title="Source Code">
-                <CodeBracketIcon
+                <CodeXml
                   className="inline-block h-4 w-4"
                   width={16}
                   height={16}
@@ -88,7 +84,7 @@ export const Footer = async ({
                 href="https://natwelch.com/privacy"
                 title="Privacy Policy"
               >
-                <DocumentCheckIcon
+                <FileCheck
                   className="inline-block h-4 w-4"
                   width={16}
                   height={16}

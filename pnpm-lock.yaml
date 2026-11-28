@@ -11,13 +11,13 @@ importers:
       '@wrksz/themes':
         specifier: ^2.1.1
         version: 2.1.1(next@16.4.6(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2)
+      lucide-react:
+        specifier: ^1.82.0
+        version: 1.82.0(@types/react@19.3.0)(react@19.3.1)
       vivus:
         specifier: ^0.4.6
         version: 0.4.6
     devDependencies:
-      '@heroicons/react':
-        specifier: ^2.2.0
-        version: 2.2.0(react@19.3.1)
       '@testing-library/dom':
         specifier: ^10.4.2
         version: 10.4.2
@@ -260,11 +260,6 @@ packages:
     peerDependenciesMeta:
       '@noble/hashes':
         optional: true
-
-  '@heroicons/react@2.2.0':
-    resolution: {integrity: sha512-LMcepvRaS9LYHJGsF0zzmgKCUim/X3N/DQKc4jepAXJ7l8QxJ1PmxJzqplF2Z3FE4PqBAIGyJAQ/w4B5dsqbtQ==}
-    peerDependencies:
-      react: '>= 16 || ^19.0.0-rc'
 
   '@img/colour@1.1.0':
     resolution: {integrity: sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==}
@@ -1247,6 +1242,15 @@ packages:
     resolution: {integrity: sha512-U4N8FgzmWxc8k1VH8Kr6lQg18U7Fjvby6wXHVRX/ZZ7IwWbRMgrRbP0Wrb5q5NVinryp4SQampHKdvtecItxUg==}
     engines: {node: 20 || >=22}
 
+  lucide-react@1.82.0:
+    resolution: {integrity: sha512-6jSApJxVZnyOGO5q7ygxiaVmzt87OtkfzpU5aD14ph32W78hBtmwEkVj2ehGyhfEynSM6TEEnFhPq24QhSOz6g==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+
   lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
     hasBin: true
@@ -1756,10 +1760,6 @@ snapshots:
     optional: true
 
   '@exodus/bytes@1.16.0': {}
-
-  '@heroicons/react@2.2.0(react@19.3.1)':
-    dependencies:
-      react: 19.3.1
 
   '@img/colour@1.1.0':
     optional: true
@@ -2436,6 +2436,12 @@ snapshots:
   load-tsconfig@0.2.5: {}
 
   lru-cache@11.5.3: {}
+
+  lucide-react@1.82.0(@types/react@19.3.0)(react@19.3.1):
+    dependencies:
+      react: 19.3.1
+    optionalDependencies:
+      '@types/react': 19.3.0
 
   lz-string@1.5.0: {}
 

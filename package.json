@@ -99,10 +99,10 @@
   },
   "dependencies": {
     "@wrksz/themes": "^2.1.1",
+    "lucide-react": "^1.82.0",
     "vivus": "^0.4.6"
   },
   "devDependencies": {
-    "@heroicons/react": "^2.2.0",
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
@@ -121,7 +121,6 @@
     "vitest": "^5.1.0"
   },
   "peerDependencies": {
-    "@heroicons/react": "^2.0.0",
     "jsdom": ">=20.0.0",
     "next": ">=16.0.0",
     "react": "^18.0.0 || ^19.0.0",

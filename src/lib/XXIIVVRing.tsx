@@ -1,8 +1,8 @@
 import {
-  ArrowLeftCircleIcon,
-  ArrowRightCircleIcon,
-  QuestionMarkCircleIcon,
-} from "@heroicons/react/24/outline";
+  CircleArrowLeft,
+  CircleArrowRight,
+  CircleQuestionMark,
+} from "lucide-react";
 import { JSDOM } from "jsdom";
 
 const fetchSites = async (): Promise<{
@@ -62,7 +62,7 @@ export const XXIIVVRing: React.FC = async () => {
         href={ring ? ring.prev : "https://webring.xxiivv.com/"}
       >
         <span className="flex items-center gap-2">
-          <ArrowLeftCircleIcon className="h-4 w-4" width={16} height={16} />{" "}
+          <CircleArrowLeft className="h-4 w-4" width={16} height={16} />{" "}
           Previous Site
         </span>
       </a>
@@ -72,7 +72,7 @@ export const XXIIVVRing: React.FC = async () => {
         href={ring ? ring.rand : "https://lieu.cblgh.org/random"}
       >
         <span className="flex items-center gap-2">
-          <QuestionMarkCircleIcon className="h-4 w-4" width={16} height={16} />{" "}
+          <CircleQuestionMark className="h-4 w-4" width={16} height={16} />{" "}
           Random Site
         </span>
       </a>
@@ -82,8 +82,8 @@ export const XXIIVVRing: React.FC = async () => {
         href={ring ? ring.next : "https://webring.xxiivv.com/"}
       >
         <span className="flex items-center gap-2">
-          <ArrowRightCircleIcon className="h-4 w-4" width={16} height={16} />{" "}
-          Next Site
+          <CircleArrowRight className="h-4 w-4" width={16} height={16} /> Next
+          Site
         </span>
       </a>
     </>
